@@ -56,10 +56,10 @@ const s = stylex.create({
     color: colors.inverted,
     backgroundImage: colors.navUnderline,
     paddingBottom: spacing.xxxs,
-    // backgroundPosition: {
-    //   default: '0 100%',
-    //   ':hover': '100% 100%',
-    // },
+    // // backgroundPosition: {
+    // //   default: '0 100%',
+    // //   ':hover': '100% 100%',
+    // // },
     backgroundSize: {
       default: '0% 2px',
       ':hover': '100% 2px',
