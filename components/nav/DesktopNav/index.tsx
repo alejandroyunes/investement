@@ -13,6 +13,7 @@ import ButtonTheme from "../../button/ButtonTheme"
 import { globalTokens, spacing } from "../../../app/globalTokens.stylex"
 import ModePicker from "../ui/ModePicker"
 import Menu from "../ui/Menu"
+import Social from "../ui/SocialMenu"
 
 export function DesktopNav() {
 
@@ -36,9 +37,7 @@ export function DesktopNav() {
 
       <div {...stylex.props(styles.right)}>
         <ModePicker />
-        <Notifications />
-        <Profile />
-        <ButtonTheme onClick={onHandleClick}>Publicar</ButtonTheme>
+        <Social />
       </div>
     </nav>
   )

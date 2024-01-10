@@ -13,8 +13,8 @@ export default function Home() {
       <div {...stylex.props(s.mobileNav)}>
         <MobileNav />
       </div>
-      <Categories />
-      <Ads />
+
+
     </>
   )
 }

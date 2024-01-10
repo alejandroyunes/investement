@@ -1,23 +1,12 @@
 'use-client'
 
 import stylex from '@stylexjs/stylex'
-import { InputHTMLAttributes, useState } from 'react'
+import { useState } from 'react'
 import { globalTokens as $, colors, spacing, text } from './../../../../app/globalTokens.stylex'
-import ArrowRightSvg from '../../../Assets/Icons/ArrowRightSvg'
-import SearchSvg from '@/components/Assets/Icons/SearchSvg'
-
 
 export default function Menu() {
   const [inputValue, setInputValue] = useState('');
 
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault()
-    console.log('Form submitted', inputValue)
-  }
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(event.target.value)
-  }
 
   return (
     <div {...stylex.props(s.main)}>
@@ -57,6 +46,8 @@ const s = stylex.create({
   span: {
     zIndex: 200,
     cursor: 'pointer',
+    forSize: text.p,
+    color: colors.inverted,
     backgroundImage: colors.navUnderline,
     paddingBottom: spacing.xxxs,
     backgroundPosition: {
