@@ -52,20 +52,19 @@ const s = stylex.create({
   span: {
     zIndex: 200,
     cursor: 'pointer',
-    forSize: text.p,
+    fontSize: text.p,
     color: colors.inverted,
     backgroundImage: colors.navUnderline,
     paddingBottom: spacing.xxxs,
-    // // backgroundPosition: {
-    // //   default: '0 100%',
-    // //   ':hover': '100% 100%',
-    // // },
+    backgroundPosition: {
+      default: '0 100%',
+      ':hover': '100% 100%',
+    },
     backgroundSize: {
       default: '0% 2px',
       ':hover': '100% 2px',
     },
     backgroundRepeat: 'no-repeat',
-    // transition: 'background-size 0.3s, background-position 0s 0.3s'
-    animationName: slideHover,
+    transition: 'background-size 0.3s, background-position 0s 0.3s'
   },
 })
