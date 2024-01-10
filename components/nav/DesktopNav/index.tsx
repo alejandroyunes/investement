@@ -5,10 +5,6 @@ import CustomInput from "../ui/CustomInput"
 import Image from "next/image"
 import logo from '../../Assets/images/logo.webp'
 
-import Location from "../ui/Location"
-import Notifications from "../ui/Notifications"
-import Profile from "../ui/Profile"
-import ButtonTheme from "../../button/ButtonTheme"
 
 import { globalTokens, spacing } from "../../../app/globalTokens.stylex"
 import ModePicker from "../ui/ModePicker"

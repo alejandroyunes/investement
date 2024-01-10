@@ -7,7 +7,7 @@ import Billboard from "@/components/billboard"
 
 export default function Home() {
   return (
-    <>
+    <div {...stylex.props(s.container)}>
       <div {...stylex.props(s.desktopNav)}>
         <DesktopNav />
       </div>
@@ -15,12 +15,23 @@ export default function Home() {
         <MobileNav />
       </div>
       <Billboard />
-
-    </>
+    </div>
   )
 }
 
+const fadeIn = stylex.keyframes({
+  '0%': { visibility: 'hidden', opacity: 0 },
+  '100%': { visibility: 'visible', opacity: 1 },
+})
+
 const s = stylex.create({
+  container: {
+    animationName: fadeIn,
+    animationDuration: '2.5s',
+    animationFillMode: 'fordwards',
+    animationIterationCount: 1,
+    animationTimingFunction: 'ease-in-out'
+  },
   desktopNav: {
     display: {
       default: "block",

@@ -5,7 +5,7 @@ const MAX_WIDTH = 1240
 const MIN_SCALE = 1.2
 const MAX_SCALE = 1.333
 const MIN_BASE_SIZE = 16
-const MAX_BASE_SIZE = 20
+const MAX_BASE_SIZE = 8
 
 // Font sizes in `rem` units
 const MIN_FONT = {

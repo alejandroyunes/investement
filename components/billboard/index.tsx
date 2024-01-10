@@ -19,24 +19,29 @@ export default function Billboard() {
     <section {...stylex.props(s.container)}>
 
       <div  {...stylex.props(s.left)}>
-        <div {...stylex.props(s.slogan)}>
-          <h3>Optimize your investment growth</h3>
-        </div>
-        <div {...stylex.props(s.headingP)}>
-          <h2>Professional</h2>
-        </div>
-        <div {...stylex.props(s.headingTitle)}>
-          <h2>Investment</h2>
+
+        <div {...stylex.props(s.topLeft)}>
+          <div {...stylex.props(s.slogan)}>
+            <h3>Optimize your investment growth</h3>
+          </div>
+          <div {...stylex.props(s.headingTitle)}>
+            <h2>Professional</h2>
+          </div>
+          <div {...stylex.props(s.headingSubTitle)}>
+            <h2>Investment</h2>
+            <h2>Company</h2>
+          </div>
+          <div {...stylex.props(s.button)}>
+            <ButtonTheme onClick={handleClick}>Explore</ButtonTheme>
+          </div>
         </div>
 
-        <div {...stylex.props(s.button)}>
-          <ButtonTheme onClick={handleClick}>Entrar</ButtonTheme>
-        </div>
-
-        <div {...stylex.props(s.arrowDown)}>
-          <span {...stylex.props(s.arrow)}>
-            <Arrow />
-          </span>
+        <div {...stylex.props(s.bottomLeft)}>
+          <div {...stylex.props(s.arrowDown)}>
+            <div {...stylex.props(s.arrow)}>
+              <Arrow />
+            </div>
+          </div>
         </div>
 
       </div>
@@ -57,29 +62,52 @@ export default function Billboard() {
   )
 }
 
+const popIn = stylex.keyframes({
+  '0%': { transform: 'translateY(0px)' },
+  '50%': { transform: 'translateY(20px)' },
+  '100%': { transform: 'translateY(0px)' },
+})
+
+const slideIn = stylex.keyframes({
+  '0%': { transform: 'translateX(60px)', visibility: 'hidden', opacity: 0 },
+  '25%': { transform: 'translateX(50px)', visibility: 'hidden', opacity: .50 },
+  '50%': { transform: 'translateX(20px)', visibility: 'hidden', opacity: 1 },
+  '100%': { transform: 'translateX(0px)' },
+})
+
+const slideClose = stylex.keyframes({
+  '0%': { transform: 'translateX(-100%)' },
+  '100%': { transform: 'translateX(0%)' },
+})
+
 const s = stylex.create({
   container: {
     width: "100%",
     display: "grid",
-    gridTemplateColumns: 'fit-content(400px) fit-content(800px)',
-    // grid-template-columns: fit-content(100px) fit-content(200px) fit-content(100px);
-
-    // grid-template-columns: minmax(100px, 1fr) minmax(200px, 2fr) minmax(100px, 1fr);
-
+    gridTemplateColumns: '1fr 1fr',
     margin: "0 auto",
     maxWidth: $.maxWidth,
   },
   left: {
     display: "flex",
     flexDirection: "column",
-    alignItems: 'flex-start',
+    justifyContent: 'space-between',
     height: 'calc(100vh - 110px)',
     margin: `0 ${spacing.md}`,
-    paddingBottom: spacing.xs,
     paddingLeft: spacing.sm,
-    paddingTop: spacing.xxxxl,
   },
-  right: {},
+  topLeft: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center'
+  },
+  bottomLeft: {
+    display: 'flex',
+    alignContent: 'flex-end',
+  },
+  right: {
+    width: '100%'
+  },
   image: {
     objectFit: 'cover',
     width: '100%',
@@ -89,28 +117,57 @@ const s = stylex.create({
     fontWeight: 'bold',
     fontSize: text.sm,
     color: colors.inverted,
-    paddingBottom: spacing.sm
-  },
-  headingP: {
-    fontSize: text.h1,
-    color: colors.primary,
-    lineHeight: spacing.xxl,
+    paddingBottom: spacing.sm,
+    paddingTop: spacing.xl,
+    animationName: slideIn,
+    animationDuration: "2s",
+    animationDelay: '1s',
+    animationFillMode: "backwards",
   },
   headingTitle: {
     fontSize: text.h1,
-    color: colors.primary
+    color: colors.inverted,
+    lineHeight: spacing.xxl,
+    animationName: slideIn,
+    animationDuration: "1s",
+    animationFillMode: "backwards",
+  },
+  headingSubTitle: {
+    fontSize: text.h1,
+    color: colors.primary,
+    lineHeight: spacing.xxl,
+    animationName: slideIn,
+    animationDuration: "1s",
+    animationFillMode: "backwards",
   },
   button: {
-    paddingTop: spacing.sm
+    paddingTop: spacing.xl,
+    color: colors.inverted,
+    animationName: slideIn,
+    animationDuration: "1s",
+    animationDelay: '.5s',
+    animationFillMode: "backwards",
   },
   arrowDown: {
-    outline: '1px solid red',
-    display: 'flex',
-    alignSelf: 'flex-end'
+    transform: 'rotate(-45deg)',
   },
   arrow: {
-
+    animationName: popIn,
+    animationDuration: "2s",
+    animationFillMode: 'both',
+    animationTimingFunction: 'ease-in-out',
+    animationIterationCount: 'infinite',
+    animationDelay: '1.5s',
   }
 })
+
+// div {
+//   animation-name: example;
+//   animation-duration: 5s;
+//   animation-timing-function: linear;
+//   animation-delay: 2s;
+//   animation-iteration-count: infinite;
+//   animation-direction: alternate;
+// }
 
 
