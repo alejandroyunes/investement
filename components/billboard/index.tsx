@@ -120,7 +120,7 @@ const s = stylex.create({
     paddingBottom: spacing.sm,
     paddingTop: spacing.xl,
     animationName: slideIn,
-    animationDuration: "2s",
+    animationDuration: '1.5s',
     animationDelay: '1s',
     animationFillMode: "backwards",
   },

@@ -28,7 +28,7 @@ const s = stylex.create({
   container: {
     animationName: fadeIn,
     animationDuration: '2.5s',
-    animationFillMode: 'fordwards',
+    animationFillMode: 'forwards',
     animationIterationCount: 1,
     animationTimingFunction: 'ease-in-out'
   },
