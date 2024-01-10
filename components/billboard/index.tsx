@@ -56,6 +56,7 @@ export default function Billboard() {
           sizes="100vw"
           style={{ width: '100%', height: 'calc(100vh - 110px)' }}
         />
+        <div {...stylex.props(s.rightBg)} />
       </div>
 
     </section >
@@ -71,9 +72,16 @@ const popIn = stylex.keyframes({
 const slideIn = stylex.keyframes({
   '0%': { transform: 'translateX(60px)', visibility: 'hidden', opacity: 0 },
   '25%': { transform: 'translateX(50px)', visibility: 'hidden', opacity: .50 },
-  '50%': { transform: 'translateX(20px)', visibility: 'hidden', opacity: 1 },
+  '50%': { transform: 'translateX(20px)', },
   '100%': { transform: 'translateX(0px)' },
 })
+
+const imageDarkSlideIn = stylex.keyframes({
+  '0%': { transform: 'translateX(0%)' },
+  '50%': { transform: 'translateX(50%)' },
+  '100%': { transform: 'translateX(100%)' },
+})
+
 
 
 const s = stylex.create({
@@ -102,7 +110,20 @@ const s = stylex.create({
     alignContent: 'flex-end',
   },
   right: {
-    width: '100%'
+    width: '100%',
+    position: 'relative'
+  },
+  rightBg: {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    background: 'red',
+    height: '100%',
+    width: '100%',
+    animationName: imageDarkSlideIn,
+    animationDuration: "1s",
+    animationFillMode: "forwards",
+    animationDelay: '.5s',
   },
   image: {
     objectFit: 'cover',
