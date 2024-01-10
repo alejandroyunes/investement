@@ -37,7 +37,6 @@ const styles = stylex.create({
     borderWidth: 0,
     borderStyle: "none",
     backgroundColor: buttonTokens.bgColor,
-    color: buttonTokens.textColor,
     borderRadius: buttonTokens.cornerRadius,
     paddingBlock: buttonTokens.paddingBlock,
     paddingInline: buttonTokens.paddingInline,
