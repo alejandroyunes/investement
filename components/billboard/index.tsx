@@ -75,10 +75,6 @@ const slideIn = stylex.keyframes({
   '100%': { transform: 'translateX(0px)' },
 })
 
-const slideClose = stylex.keyframes({
-  '0%': { transform: 'translateX(-100%)' },
-  '100%': { transform: 'translateX(0%)' },
-})
 
 const s = stylex.create({
   container: {

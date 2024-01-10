@@ -65,6 +65,7 @@ const s = stylex.create({
       ':hover': '100% 2px',
     },
     backgroundRepeat: 'no-repeat',
-    // transition: 'background-size 0.3s, background-position 0s 0.3s'
+    // eslint-disable-next-line @stylexjs/valid-styles
+    transition: 'background-size 0.3s, background-position 0s 0.3s',
   },
 })
