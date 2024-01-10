@@ -5,6 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import invest from './assets/invest.jpg'
 import ButtonTheme from "../button/ButtonTheme"
+import Arrow from "../Assets/Icons/Arrow"
 
 
 
@@ -19,18 +20,23 @@ export default function Billboard() {
 
       <div  {...stylex.props(s.left)}>
         <div {...stylex.props(s.slogan)}>
-          <p>Optimize your investment growth</p>
+          <h3>Optimize your investment growth</h3>
         </div>
         <div {...stylex.props(s.headingP)}>
-          <p>Professional</p>
+          <h2>Professional</h2>
         </div>
         <div {...stylex.props(s.headingTitle)}>
-          <p>Investment</p>
+          <h2>Investment</h2>
         </div>
 
         <div {...stylex.props(s.button)}>
           <ButtonTheme onClick={handleClick}>Entrar</ButtonTheme>
+        </div>
 
+        <div {...stylex.props(s.arrowDown)}>
+          <span {...stylex.props(s.arrow)}>
+            <Arrow />
+          </span>
         </div>
 
       </div>
@@ -55,7 +61,11 @@ const s = stylex.create({
   container: {
     width: "100%",
     display: "grid",
-    gridTemplateColumns: 'repeat(2, 1fr)',
+    gridTemplateColumns: 'fit-content(400px) fit-content(800px)',
+    // grid-template-columns: fit-content(100px) fit-content(200px) fit-content(100px);
+
+    // grid-template-columns: minmax(100px, 1fr) minmax(200px, 2fr) minmax(100px, 1fr);
+
     margin: "0 auto",
     maxWidth: $.maxWidth,
   },
@@ -69,16 +79,15 @@ const s = stylex.create({
     paddingLeft: spacing.sm,
     paddingTop: spacing.xxxxl,
   },
-  right: {
-
-  },
+  right: {},
   image: {
-    objectFit: 'cover'
+    objectFit: 'cover',
+    width: '100%',
   },
   slogan: {
     textTransform: 'uppercase',
     fontWeight: 'bold',
-    fontSize: text.p,
+    fontSize: text.sm,
     color: colors.inverted,
     paddingBottom: spacing.sm
   },
@@ -93,6 +102,14 @@ const s = stylex.create({
   },
   button: {
     paddingTop: spacing.sm
+  },
+  arrowDown: {
+    outline: '1px solid red',
+    display: 'flex',
+    alignSelf: 'flex-end'
+  },
+  arrow: {
+
   }
 })
 
