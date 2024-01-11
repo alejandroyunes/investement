@@ -149,7 +149,6 @@ const styles = stylex.create({
       default: spacing.xxl,
       '@media (max-width: 1024px)': spacing.xl,
     },
-    paddingDown: 100
   },
   logo: {
     marginTop: spacing.lg
