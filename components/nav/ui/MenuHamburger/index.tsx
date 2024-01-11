@@ -177,7 +177,6 @@ const styles = stylex.create({
     fontSize: text.p,
     color: colors.inverted,
     listStyleType: 'none',
-    margin: 'auto 0',
     paddingLeft: {
       default: spacing.xxl,
       '@media (max-width: 1024px)': spacing.xl,
@@ -205,9 +204,10 @@ const styles = stylex.create({
     borderTopStyle: 'solid',
     borderTopWidth: '1px',
     borderTopColor: colors.xBorderColor,
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'column',
+    width: '100vh',
+    display: 'grid',
+    paddingBottom: spacing.sm,
+    paddingTop: spacing.sm,
   },
   contactTel: {
     paddingLeft: {

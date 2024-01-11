@@ -124,7 +124,7 @@ const styles = stylex.create({
     },
     display: 'flex',
     flexDirection: 'column',
-    height: "100vh",
+    height: "100%",
     borderLeftStyle: "solid",
     borderLeftWidth: 2,
     borderLeftColor: colors.xBorderColor,
@@ -170,13 +170,12 @@ const styles = stylex.create({
   content: {
     display: "grid",
     alignItems: 'center',
-    height: "100vh",
+    height: "100%",
   },
   body: {
     fontSize: text.p,
     color: colors.inverted,
     listStyleType: 'none',
-    margin: 'auto 0',
     paddingLeft: {
       default: spacing.xxl,
       '@media (max-width: 1024px)': spacing.xl,
@@ -205,8 +204,9 @@ const styles = stylex.create({
     borderTopWidth: '1px',
     borderTopColor: colors.xBorderColor,
     width: '100%',
-    display: 'flex',
-    flexDirection: 'column',
+    display: 'grid',
+    paddingBottom: spacing.sm,
+    paddingTop: spacing.sm,
   },
   contactTel: {
     paddingLeft: {
