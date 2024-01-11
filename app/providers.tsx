@@ -32,7 +32,9 @@ export const ThemeProvider = ({ children }: Props) => {
   const contextValue: ThemeContextType = { theme, setTheme }
 
   useEffect(() => {
-    localStorage.setItem('theme', theme)
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('theme', theme)
+    }
   }, [theme])
 
   return (
