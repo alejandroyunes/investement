@@ -30,10 +30,6 @@ export default function Menu() {
   )
 }
 
-const sizeAnimation = stylex.keyframes({
-  '0%': { backgroundSize: '0% 2px', backgroundPosition: '0% 100%' },
-  '100%': { backgroundSize: '100% 2px', backgroundPosition: '100% 100%' },
-})
 
 const s = stylex.create({
   main: {
@@ -56,10 +52,6 @@ const s = stylex.create({
     backgroundImage: colors.navUnderline,
     paddingBottom: spacing.xxxs,
     backgroundRepeat: 'no-repeat',
-    transitionProperty: "transform",
-    transition: "background-size 0.3s, background-position 0s 0.3s",
-
-
     backgroundPosition: {
       default: '0 100%',
       ':hover': '100% 100%',
@@ -68,17 +60,7 @@ const s = stylex.create({
       default: '0% 2px',
       ':hover': '100% 2px',
     },
-
-
-    // backgroundPosition: {
-    //   default: '0 100%',
-    //   ':hover': '100% 100%',
-    // },
-    // backgroundSize: {
-    //   default: '0% 2px',
-    //   ':hover': '100% 2px',
-    // },
     // eslint-disable-next-line @stylexjs/valid-styles
-    // transition: 'background-size 0.3s, background-position 0s 0.3s',
+    transition: 'background-size 0.3s, background-position 0s 0.3s',
   },
 })
