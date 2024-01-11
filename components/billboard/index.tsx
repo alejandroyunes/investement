@@ -7,8 +7,6 @@ import invest from './assets/invest.jpg'
 import ButtonTheme from "../button/ButtonTheme"
 import Arrow from "../Assets/Icons/Arrow"
 
-
-
 export default function Billboard() {
 
   const handleClick = () => {
@@ -63,7 +61,7 @@ export default function Billboard() {
   )
 }
 
-const popIn = stylex.keyframes({
+const pointingDown = stylex.keyframes({
   '0%': { transform: 'translateY(0px)' },
   '50%': { transform: 'translateY(20px)' },
   '100%': { transform: 'translateY(0px)' },
@@ -71,17 +69,14 @@ const popIn = stylex.keyframes({
 
 const slideIn = stylex.keyframes({
   '0%': { transform: 'translateX(60px)', visibility: 'hidden', opacity: 0 },
-  '25%': { transform: 'translateX(50px)', visibility: 'hidden', opacity: .50 },
-  '50%': { transform: 'translateX(20px)', },
+  '25%': { transform: 'translateX(50px)', visibility: 'hidden', opacity: .5 },
   '100%': { transform: 'translateX(0px)' },
 })
 
 const imageDarkSlideIn = stylex.keyframes({
-  '0%': { transform: 'translateX(0%)' },
-  '50%': { transform: 'translateX(50%)' },
-  '100%': { transform: 'translateX(100%)' },
+  '0%': { backgroundSize: '100% 100%' },
+  '100%': { backgroundSize: '0% 100%' },
 })
-
 
 
 const s = stylex.create({
@@ -93,7 +88,7 @@ const s = stylex.create({
     maxWidth: $.maxWidth,
   },
   left: {
-    display: "flex",
+    display: "inline-flex",
     flexDirection: "column",
     justifyContent: 'space-between',
     height: 'calc(100vh - 110px)',
@@ -101,9 +96,7 @@ const s = stylex.create({
     paddingLeft: spacing.sm,
   },
   topLeft: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center'
+    margin: 'auto 0'
   },
   bottomLeft: {
     display: 'flex',
@@ -117,13 +110,16 @@ const s = stylex.create({
     position: 'absolute',
     left: 0,
     top: 0,
-    background: 'red',
+    backgroundImage: colors.navUnderline,
     height: '100%',
     width: '100%',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'right',
     animationName: imageDarkSlideIn,
-    animationDuration: "1s",
-    animationFillMode: "forwards",
-    animationDelay: '.5s',
+    animationDuration: '1s',
+    animationTimingFunction: 'ease-out',
+    animationIterationCount: 1,
+    animationFillMode: 'forwards'
   },
   image: {
     objectFit: 'cover',
@@ -137,8 +133,8 @@ const s = stylex.create({
     paddingBottom: spacing.sm,
     paddingTop: spacing.xl,
     animationName: slideIn,
-    animationDuration: '1.5s',
-    animationDelay: '1s',
+    animationDuration: '1.2s',
+    animationDelay: '.7s',
     animationFillMode: "backwards",
   },
   headingTitle: {
@@ -169,22 +165,11 @@ const s = stylex.create({
     transform: 'rotate(-45deg)',
   },
   arrow: {
-    animationName: popIn,
+    animationName: pointingDown,
     animationDuration: "2s",
     animationFillMode: 'both',
     animationTimingFunction: 'ease-in-out',
     animationIterationCount: 'infinite',
-    animationDelay: '1.5s',
+    animationDelay: '3.5s',
   }
 })
-
-// div {
-//   animation-name: example;
-//   animation-duration: 5s;
-//   animation-timing-function: linear;
-//   animation-delay: 2s;
-//   animation-iteration-count: infinite;
-//   animation-direction: alternate;
-// }
-
-
