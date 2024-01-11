@@ -38,7 +38,6 @@ export default function Social() {
 
         <div {...stylex.props(styles.content)}>
 
-          {/* <div> */}
           <ul {...stylex.props(styles.body)}>
             <li {...stylex.props(styles.items)}>
               <span {...stylex.props(styles.svg)}>
@@ -73,7 +72,6 @@ export default function Social() {
               </p>
             </li>
           </ul>
-          {/* </div> */}
 
           <div {...stylex.props(styles.contact)}>
             <p {...stylex.props(styles.contactTel)}>+1 800 555 44 88</p>
@@ -124,6 +122,8 @@ const styles = stylex.create({
       default: "30vw",
       "@media (max-width: 900px)": "80vw"
     },
+    display: 'flex',
+    flexDirection: 'column',
     height: "100vh",
     borderLeftStyle: "solid",
     borderLeftWidth: 2,
@@ -148,7 +148,8 @@ const styles = stylex.create({
     paddingLeft: {
       default: spacing.xxl,
       '@media (max-width: 1024px)': spacing.xl,
-    }
+    },
+    paddingDown: 100
   },
   logo: {
     marginTop: spacing.lg
@@ -168,18 +169,15 @@ const styles = stylex.create({
     marginBottom: 16
   },
   content: {
-    display: "flex",
-    justifyContent: "space-around",
-    flexDirection: "column",
-    height: {
-      default: '100%',
-      '@media (max-width: 900px)': 'calc(100% - 100px)',
-    },
+    display: "grid",
+    alignItems: 'center',
+    height: "100vh",
   },
   body: {
     fontSize: text.p,
     color: colors.inverted,
-    listStyleType: 'disc',
+    listStyleType: 'none',
+    margin: 'auto 0',
     paddingLeft: {
       default: spacing.xxl,
       '@media (max-width: 1024px)': spacing.xl,
@@ -209,7 +207,7 @@ const styles = stylex.create({
     borderTopColor: colors.xBorderColor,
     width: '100%',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   contactTel: {
     paddingLeft: {
