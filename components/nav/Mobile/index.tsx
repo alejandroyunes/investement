@@ -8,6 +8,7 @@ import logo from '../../Assets/images/logo.webp'
 import { spacing } from "../../../app/globalTokens.stylex"
 import Social from "../ui/SocialMenu"
 import HorizontalHamburger from "@/components/Assets/Icons/HorizontalHamburger"
+import MenuHamburger from "../ui/MenuHamburger"
 
 export function MobileNav() {
 
@@ -21,7 +22,7 @@ export function MobileNav() {
       <div  {...stylex.props(styles.row)}>
 
         <div {...stylex.props(styles.left)}>
-          <HorizontalHamburger />
+          <MenuHamburger />
           <Image
             {...stylex.props(styles.logo)}
             src={logo}
