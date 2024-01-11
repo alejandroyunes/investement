@@ -7,19 +7,23 @@ import ExitSvg from "../../../Assets/Icons/ExitSvg"
 import VerticalHamburger from "@/components/Assets/Icons/VerticalHamburger"
 import Image from "next/image"
 import logo from '../../../Assets/images/logo.webp'
+import Facebook from "@/components/Assets/Icons/Facebook"
+import Twitter from "@/components/Assets/Icons/Twitter"
+import Instagram from "@/components/Assets/Icons/Instagram"
+import Youtube from "@/components/Assets/Icons/Youtube"
 
 export default function Social() {
   const [open, setOpen] = useState<boolean>()
 
   return (
     <>
-      <div {...stylex.props(styles.clickIcon)} onClick={() => setOpen(!open)}>
+      <div {...stylex.props(styles.hamburgerMenu)} onClick={() => setOpen(!open)}>
         <VerticalHamburger />
       </div>
 
-      <div {...stylex.props(styles.sliderContainer, open && styles.slideIn, open === false && styles.slideOut)}>
+      <div {...stylex.props(styles.container, open && styles.slideIn, open === false && styles.slideOut)}>
 
-        <div   {...stylex.props(styles.logoContainer)}>
+        <div   {...stylex.props(styles.header)}>
           <Image
             {...stylex.props(styles.logo)}
             src={logo}
@@ -32,23 +36,48 @@ export default function Social() {
           </div>
         </div>
 
-        <div {...stylex.props(styles.animationContainer)}>
+        <div {...stylex.props(styles.content)}>
+          <ul {...stylex.props(styles.body)}>
+            <li {...stylex.props(styles.items)}>
+              <span {...stylex.props(styles.svg)}>
+                <Facebook />
+              </span>
+              <p {...stylex.props(styles.paragrah)}>
+                Facebook
+              </p>
+            </li>
+            <li {...stylex.props(styles.items)}>
+              <span {...stylex.props(styles.svg)}>
+                <Instagram />
+              </span>
+              <p {...stylex.props(styles.paragrah)}>
+                Instagram
+              </p>
+            </li>
+            <li {...stylex.props(styles.items)}>
+              <span {...stylex.props(styles.svg)}>
+                <Twitter />
+              </span>
+              <p {...stylex.props(styles.paragrah)}>
+                Twitter
+              </p>
+            </li>
+            <li {...stylex.props(styles.items)}>
+              <span {...stylex.props(styles.svg)}>
+                <Youtube />
+              </span>
+              <p {...stylex.props(styles.paragrah)}>
+                Youtube
+              </p>
+            </li>
+          </ul>
 
-          <div {...stylex.props(styles.notifications)}>
-            <ul>
-              <li>Facebook</li>
-              <li>Instagram</li>
-              <li>Twitter</li>
-              <li>Youtube</li>
-            </ul>
-          </div>
-
-          <div>
-            <p>information</p>
+          <div {...stylex.props(styles.contact)}>
+            <p {...stylex.props(styles.contactTel)}>+1 800 555 44 88</p>
+            <p {...stylex.props(styles.contactEmail)}>info@email.com</p>
           </div>
 
         </div>
-
 
       </div>
 
@@ -73,7 +102,7 @@ const fadeIn = stylex.keyframes({
 })
 
 const styles = stylex.create({
-  clickIcon: {
+  hamburgerMenu: {
     cursor: "pointer",
     display: "flex",
     alignItems: "center",
@@ -81,7 +110,7 @@ const styles = stylex.create({
     marginRight: spacing.xxs,
     zIndex: 4,
   },
-  sliderContainer: {
+  container: {
     position: "fixed",
     top: 0,
     right: {
@@ -97,7 +126,7 @@ const styles = stylex.create({
     borderLeftWidth: 2,
     borderLeftColor: colors.xBorderColor,
     willChange: 'transform',
-    backgroundColor: colors.bg
+    backgroundColor: colors.bg,
   },
   slideIn: {
     animationName: slideIn,
@@ -111,30 +140,82 @@ const styles = stylex.create({
     animationFillMode: "forwards",
     zIndex: 101
   },
-  animationContainer: {
-    display: "flex",
-    justifyContent: "space-around",
-    flexDirection: "column",
-    alignItems: 'center',
-    height: '100vh',
-  },
-  animationExit: {
-    display: "flex",
-    position: "absolute",
-    top: 10,
-    right: 16,
-    cursor: "pointer"
-  },
-  logoContainer: {
+  header: {
     display: 'flex',
-    justifyContent: 'center'
+    paddingLeft: {
+      default: spacing.xxl,
+      '@media (max-width: 1024px)': spacing.xl,
+    }
   },
   logo: {
     marginTop: spacing.lg
   },
-  notifications: {
+  animationExit: {
+    display: "flex",
+    position: "absolute",
+    top: 24,
+    right: 24,
+    cursor: "pointer",
+    backgroundColor: colors.gray,
+    borderRadius: "50%",
+    alignItems: "center",
+    justifyContent: "center",
+    width: 40,
+    height: 40,
+    marginBottom: 16
+  },
+  content: {
+    display: "flex",
+    justifyContent: "space-around",
+    flexDirection: "column",
+    height: '100vh',
+  },
+  body: {
     fontSize: text.p,
-    color: colors.inverted
+    color: colors.inverted,
+    listStyleType: 'none',
+    width: 40,
+    height: 40,
+    paddingLeft: spacing.xxl,
+  },
+  items: {
+    display: 'flex',
+    alignItems: 'center',
+    marginBottom: spacing.xxs,
+  },
+  svg: {
+    backgroundColor: {
+      default: null,
+      ':hover': colors.primary,
+    },
+    width: 50,
+    height: 50,
+    cursor: 'pointer',
+  },
+  paragrah: {
+    fontSize: text.h5,
+    marginLeft: spacing.xs,
+  },
+  contact: {
+    borderTopStyle: 'solid',
+    borderTopWidth: '1px',
+    borderTopColor: colors.xBorderColor,
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  contactTel: {
+    paddingLeft: spacing.xxl,
+    fontSize: text.h4,
+    color: colors.inverted,
+    fontWeight: 'bold',
+    paddingTop: spacing.sm
+  },
+  contactEmail: {
+    paddingLeft: spacing.xxl,
+    fontSize: text.h5,
+    color: colors.gray,
+    paddingTop: spacing.xxs
   },
   bg: {
     position: "fixed",

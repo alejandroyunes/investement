@@ -30,7 +30,7 @@ export default function Billboard() {
             <h2>Company</h2>
           </div>
           <div {...stylex.props(s.button)}>
-            <ButtonTheme onClick={handleClick}>Explore</ButtonTheme>
+            <ButtonTheme variant="primary" onClick={handleClick}>Explore</ButtonTheme>
           </div>
         </div>
 
@@ -155,11 +155,11 @@ const s = stylex.create({
   },
   button: {
     paddingTop: spacing.xl,
-    color: colors.inverted,
     animationName: slideIn,
     animationDuration: "1s",
     animationDelay: '.5s',
     animationFillMode: "backwards",
+    color: 'green'
   },
   arrowDown: {
     transform: 'rotate(-45deg)',

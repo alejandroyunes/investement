@@ -17,5 +17,8 @@ export const s = stylex.create({
   svgFill: {
     fill: colors.inverted
   },
+  black: {
+    fill: colors.black
+  }
 })
 

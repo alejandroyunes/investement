@@ -1,6 +1,6 @@
 import * as stylex from "@stylexjs/stylex"
 import type { StyleXStyles, Theme } from "@stylexjs/stylex/lib/StyleXTypes"
-import { text } from '../../app/globalTokens.stylex'
+import { colors, text } from '../../app/globalTokens.stylex'
 import "./ButtonTokens.stylex"
 import { buttonTokens } from "./ButtonTokens.stylex"
 
@@ -36,7 +36,7 @@ const styles = stylex.create({
     appearance: "none",
     borderWidth: 0,
     borderStyle: "none",
-    backgroundColor: buttonTokens.bgColor,
+    backgroundColor: colors.primary,
     borderRadius: buttonTokens.cornerRadius,
     paddingBlock: buttonTokens.paddingBlock,
     paddingInline: buttonTokens.paddingInline,
@@ -55,5 +55,6 @@ const variantStyles = stylex.create({
   },
   primary: {
     fontWeight: "bold",
+    color: colors.black
   },
 })
