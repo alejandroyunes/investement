@@ -37,40 +37,43 @@ export default function Social() {
         </div>
 
         <div {...stylex.props(styles.content)}>
-          <ul {...stylex.props(styles.body)}>
-            <li {...stylex.props(styles.items)}>
-              <span {...stylex.props(styles.svg)}>
-                <Facebook />
-              </span>
-              <p {...stylex.props(styles.paragrah)}>
-                Facebook
-              </p>
-            </li>
-            <li {...stylex.props(styles.items)}>
-              <span {...stylex.props(styles.svg)}>
-                <Instagram />
-              </span>
-              <p {...stylex.props(styles.paragrah)}>
-                Instagram
-              </p>
-            </li>
-            <li {...stylex.props(styles.items)}>
-              <span {...stylex.props(styles.svg)}>
-                <Twitter />
-              </span>
-              <p {...stylex.props(styles.paragrah)}>
-                Twitter
-              </p>
-            </li>
-            <li {...stylex.props(styles.items)}>
-              <span {...stylex.props(styles.svg)}>
-                <Youtube />
-              </span>
-              <p {...stylex.props(styles.paragrah)}>
-                Youtube
-              </p>
-            </li>
-          </ul>
+
+          <div>
+            <ul {...stylex.props(styles.body)}>
+              <li {...stylex.props(styles.items)}>
+                <span {...stylex.props(styles.svg)}>
+                  <Facebook />
+                </span>
+                <p {...stylex.props(styles.paragrah)}>
+                  Facebook
+                </p>
+              </li>
+              <li {...stylex.props(styles.items)}>
+                <span {...stylex.props(styles.svg)}>
+                  <Instagram />
+                </span>
+                <p {...stylex.props(styles.paragrah)}>
+                  Instagram
+                </p>
+              </li>
+              <li {...stylex.props(styles.items)}>
+                <span {...stylex.props(styles.svg)}>
+                  <Twitter />
+                </span>
+                <p {...stylex.props(styles.paragrah)}>
+                  Twitter
+                </p>
+              </li>
+              <li {...stylex.props(styles.items)}>
+                <span {...stylex.props(styles.svg)}>
+                  <Youtube />
+                </span>
+                <p {...stylex.props(styles.paragrah)}>
+                  Youtube
+                </p>
+              </li>
+            </ul>
+          </div>
 
           <div {...stylex.props(styles.contact)}>
             <p {...stylex.props(styles.contactTel)}>+1 800 555 44 88</p>
