@@ -1,41 +1,55 @@
 "use client"
 
 import stylex from "@stylexjs/stylex"
-import BellSvg from "../../../Assets/Icons/BellSvg"
 import { globalTokens as $, colors, spacing, text } from "../../../../app/globalTokens.stylex"
-import { useRef, useState } from "react"
+import { useState } from "react"
 import ExitSvg from "../../../Assets/Icons/ExitSvg"
-import BellSlashSvg from "../../../Assets/Icons/BellSlashSvg"
-import SocialMenu from "@/components/Assets/Icons/SocialMenu"
 import VerticalHamburger from "@/components/Assets/Icons/VerticalHamburger"
+import Image from "next/image"
+import logo from '../../../Assets/images/logo.webp'
 
 export default function Social() {
   const [open, setOpen] = useState<boolean>()
 
   return (
     <>
-      <div {...stylex.props(styles.icon)} onClick={() => setOpen(!open)}>
+      <div {...stylex.props(styles.clickIcon)} onClick={() => setOpen(!open)}>
         <VerticalHamburger />
       </div>
 
-      <div {...stylex.props(styles.sliderContainer, open && styles.slideIn, open === false && styles.slideOut)} >
+      <div {...stylex.props(styles.sliderContainer, open && styles.slideIn, open === false && styles.slideOut)}>
+
+        <div   {...stylex.props(styles.logoContainer)}>
+          <Image
+            {...stylex.props(styles.logo)}
+            src={logo}
+            alt="alt"
+            width={130}
+            height={30}
+          />
+          <div {...stylex.props(styles.animationExit)} onClick={() => setOpen(false)}>
+            <ExitSvg />
+          </div>
+        </div>
+
         <div {...stylex.props(styles.animationContainer)}>
 
-          <div {...stylex.props(styles.animationBell)}>
-            <SocialMenu />
-          </div>
-
           <div {...stylex.props(styles.notifications)}>
-            <p>
-              No hay notificaciones
-            </p>
+            <ul>
+              <li>Facebook</li>
+              <li>Instagram</li>
+              <li>Twitter</li>
+              <li>Youtube</li>
+            </ul>
+          </div>
+
+          <div>
+            <p>information</p>
           </div>
 
         </div>
 
-        <div {...stylex.props(styles.animationExit)} onClick={() => setOpen(false)}>
-          <ExitSvg />
-        </div>
+
       </div>
 
       {open && <div {...stylex.props(styles.bg)} onClick={() => setOpen(false)} />}
@@ -59,7 +73,7 @@ const fadeIn = stylex.keyframes({
 })
 
 const styles = stylex.create({
-  icon: {
+  clickIcon: {
     cursor: "pointer",
     display: "flex",
     alignItems: "center",
@@ -99,11 +113,10 @@ const styles = stylex.create({
   },
   animationContainer: {
     display: "flex",
-    position: 'relative',
-    justifyContent: "center",
+    justifyContent: "space-around",
     flexDirection: "column",
-    alignItems: "center",
-    marginTop: 24,
+    alignItems: 'center',
+    height: '100vh',
   },
   animationExit: {
     display: "flex",
@@ -112,15 +125,12 @@ const styles = stylex.create({
     right: 16,
     cursor: "pointer"
   },
-  animationBell: {
-    backgroundColor: colors.inverted,
-    borderRadius: "50%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: 56,
-    height: 56,
-    marginBottom: 16
+  logoContainer: {
+    display: 'flex',
+    justifyContent: 'center'
+  },
+  logo: {
+    marginTop: spacing.lg
   },
   notifications: {
     fontSize: text.p,

@@ -20,6 +20,10 @@ export const lightTheme = stylex.createTheme(colors, {
     default: 'linear-gradient(#262424 0 0)',
     [DARK]: 'linear-gradient(#262424 0 0)'
   },
+  animationDarkBg: {
+    default: 'linear-gradient(#262424 0 0)',
+    [DARK]: 'linear-gradient(#262424 0 0)',
+  },
   invertedShadows: {
     default: "0 3px 10px rgba(0, 0, 0, 0.2)",
     [DARK]: "0 3px 10px rgba(0, 0, 0, 0.2)",
@@ -42,6 +46,10 @@ export const darkTheme = stylex.createTheme(colors, {
   navUnderline: {
     default: 'linear-gradient(#edebeb 0 0)',
     [DARK]: 'linear-gradient(#edebeb 0 0)',
+  },
+  animationDarkBg: {
+    default: 'linear-gradient(#262424 0 0)',
+    [DARK]: 'linear-gradient(#262424 0 0)',
   },
   invertedShadows: {
     default: "0 3px 10px rgba(142, 109, 109, 0.2)",

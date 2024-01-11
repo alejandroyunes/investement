@@ -15,7 +15,7 @@ export default function ModePicker() {
   return (
     <div {...stylex.props(s.container)} onClick={() => setOpen(!open)} >
       <div {...stylex.props(s.icon)}>
-        {open ?
+        {!open ?
           <span {...stylex.props(s.icon)} onClick={() => setTheme('light')}><LightModeSvg /></span>
           :
           <span {...stylex.props(s.icon)} onClick={() => setTheme('dark')}><DarkModeSvg /></span>

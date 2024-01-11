@@ -110,7 +110,7 @@ const s = stylex.create({
     position: 'absolute',
     left: 0,
     top: 0,
-    backgroundImage: colors.navUnderline,
+    backgroundImage: colors.animationDarkBg,
     height: '100%',
     width: '100%',
     backgroundRepeat: 'no-repeat',
@@ -134,7 +134,7 @@ const s = stylex.create({
     paddingTop: spacing.xl,
     animationName: slideIn,
     animationDuration: '1.2s',
-    animationDelay: '.7s',
+    animationDelay: '.6s',
     animationFillMode: "backwards",
   },
   headingTitle: {

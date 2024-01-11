@@ -1,7 +1,5 @@
 "use client"
 import * as stylex from "@stylexjs/stylex"
-
-import CustomInput from "../ui/CustomInput"
 import Image from "next/image"
 import logo from '../../Assets/images/logo.webp'
 
@@ -12,10 +10,6 @@ import Menu from "../ui/Menu"
 import Social from "../ui/SocialMenu"
 
 export function DesktopNav() {
-
-  const onHandleClick = () => {
-    console.log("click")
-  }
 
   return (
     <nav {...stylex.props(styles.container)}>
