@@ -26,16 +26,17 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 export const ThemeProvider = ({ children }: Props) => {
-  const storeTheme = localStorage.getItem('theme') as Theme | null
+
+  const isLocalStorageSupported = typeof window !== 'undefined' && window.localStorage;
+
+  const storeTheme = isLocalStorageSupported ? localStorage.getItem('theme') as Theme | null : null;
   const [theme, setTheme] = useState<Theme>(storeTheme || 'dark')
 
   const contextValue: ThemeContextType = { theme, setTheme }
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('theme', theme)
-    }
-  }, [theme])
+    localStorage.setItem('theme', theme)
+  }, [theme, isLocalStorageSupported])
 
   return (
     <ThemeContext.Provider value={contextValue}>
