@@ -176,7 +176,10 @@ const styles = stylex.create({
     listStyleType: 'none',
     width: 40,
     height: 40,
-    paddingLeft: spacing.xxl,
+    paddingLeft: {
+      default: spacing.xxl,
+      '@media (max-width: 1024px)': spacing.xl,
+    }
   },
   items: {
     display: 'flex',
@@ -205,14 +208,20 @@ const styles = stylex.create({
     flexDirection: 'column'
   },
   contactTel: {
-    paddingLeft: spacing.xxl,
+    paddingLeft: {
+      default: spacing.xxl,
+      '@media (max-width: 1024px)': spacing.xl,
+    },
     fontSize: text.h4,
     color: colors.inverted,
     fontWeight: 'bold',
     paddingTop: spacing.sm
   },
   contactEmail: {
-    paddingLeft: spacing.xxl,
+    paddingLeft: {
+      default: spacing.xxl,
+      '@media (max-width: 1024px)': spacing.xl,
+    },
     fontSize: text.h5,
     color: colors.gray,
     paddingTop: spacing.xxs

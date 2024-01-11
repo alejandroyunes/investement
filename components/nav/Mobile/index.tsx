@@ -4,15 +4,15 @@ import * as stylex from "@stylexjs/stylex"
 
 import CustomInput from "../ui/CustomInput"
 import Image from "next/image"
-import ventas from '../../Assets/images/logo.webp'
 import Location from "../ui/Location"
 import ModePicker from "../ui/ModePicker"
-import Messages from "../ui/Messages"
 import Notifications from "../ui/Notifications"
 import Profile from "../ui/Profile"
 import HamburgerSvg from "../../Assets/Icons/HamburgerSvg"
 import ButtonTheme from "../../button/ButtonTheme"
+import logo from '../../Assets/images/logo.webp'
 import { spacing } from "../../../app/globalTokens.stylex"
+import Social from "../ui/SocialMenu"
 
 export function MobileNav() {
 
@@ -28,20 +28,16 @@ export function MobileNav() {
           <HamburgerSvg />
           <Image
             {...stylex.props(styles.logo)}
-            src={ventas}
+            src={logo}
             alt="alt"
-            width={30}
+            width={130}
             height={30}
           />
         </div>
         <div {...stylex.props(styles.upItems)}>
-          <Location />
           <ModePicker />
 
-          <div {...stylex.props(styles.buttonContainer)}>
-            <ButtonTheme onClick={onClick}>Entrar</ButtonTheme>
-          </div>
-          <Notifications />
+          <Social />
         </div>
       </div>
 
