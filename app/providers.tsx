@@ -6,6 +6,7 @@ import React, {
   useContext,
   Dispatch,
   SetStateAction,
+  useEffect,
 } from 'react'
 import * as stylex from "@stylexjs/stylex"
 import { globalTokens as $, colors } from "./globalTokens.stylex"
@@ -25,8 +26,14 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 export const ThemeProvider = ({ children }: Props) => {
-  const [theme, setTheme] = useState<Theme>('dark')
+  const storeTheme = localStorage.getItem('theme') as Theme | null
+  const [theme, setTheme] = useState<Theme>(storeTheme || 'dark')
+
   const contextValue: ThemeContextType = { theme, setTheme }
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme)
+  }, [theme])
 
   return (
     <ThemeContext.Provider value={contextValue}>
@@ -47,8 +54,6 @@ export const useTheme = () => {
   return context
 }
 
-const fgColor = `rgba(${$.foregroundR}, ${$.foregroundG}, ${$.foregroundB}, 1)`
-
 const s = stylex.create({
   html: {
     colorScheme: "light dark"
@@ -59,7 +64,7 @@ const s = stylex.create({
     padding: 0,
   },
   body: {
-    color: fgColor,
+    color: colors.inverted,
     backgroundColor: colors.bg,
     fontFamily: $.fontSans,
   }

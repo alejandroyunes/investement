@@ -10,12 +10,12 @@ import { useTheme } from "@/app/providers"
 
 export default function ModePicker() {
   const [open, setOpen] = useState(false)
-  const { setTheme } = useTheme()
+  const { setTheme, theme } = useTheme()
 
   return (
     <div {...stylex.props(s.container)} onClick={() => setOpen(!open)} >
       <div {...stylex.props(s.icon)}>
-        {!open ?
+        {theme === 'dark' ?
           <span {...stylex.props(s.icon)} onClick={() => setTheme('light')}><LightModeSvg /></span>
           :
           <span {...stylex.props(s.icon)} onClick={() => setTheme('dark')}><DarkModeSvg /></span>
