@@ -2,7 +2,7 @@
 
 import stylex from "@stylexjs/stylex"
 import { globalTokens as $, colors, spacing, text } from "../../../../app/globalTokens.stylex"
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import ExitSvg from "../../../Assets/Icons/ExitSvg"
 import VerticalHamburger from "@/components/Assets/Icons/VerticalHamburger"
 import Image from "next/image"
@@ -14,6 +14,14 @@ import Youtube from "@/components/Assets/Icons/Youtube"
 
 export default function MenuHamburger() {
   const [open, setOpen] = useState<boolean>()
+
+  const handleClose = () => {
+    setOpen(false)
+
+    setTimeout(() => {
+      setOpen(undefined)
+    }, 1000)
+  }
 
   return (
     <>
@@ -31,7 +39,7 @@ export default function MenuHamburger() {
             width={130}
             height={30}
           />
-          <div {...stylex.props(styles.animationExit)} onClick={() => setOpen(false)}>
+          <div {...stylex.props(styles.animationExit)} onClick={handleClose}>
             <ExitSvg />
           </div>
         </div>
@@ -82,19 +90,19 @@ export default function MenuHamburger() {
 
       </div>
 
-      {open && <div {...stylex.props(styles.bg)} onClick={() => setOpen(false)} />}
+      {open && <div {...stylex.props(styles.bg)} onClick={handleClose} />}
     </>
   )
 }
 
 const slideIn = stylex.keyframes({
-  '0%': { transform: 'translateX(0%)' },
-  '100%': { transform: 'translateX(-100%)' },
+  '0%': { transform: 'translateY(-100%)' },
+  '100%': { transform: 'translateY(100%)' },
 })
 
 const slideOut = stylex.keyframes({
-  '0%': { transform: 'translateX(-100%)' },
-  '100%': { transform: 'translateX(0%)' },
+  '0%': { transform: 'translateY(100%)' },
+  '100%': { transform: 'translateY(-100%)' },
 })
 
 const fadeIn = stylex.keyframes({
@@ -114,21 +122,15 @@ const styles = stylex.create({
   },
   container: {
     position: "fixed",
-    top: 0,
-    right: {
-      default: "-30vw",
-      "@media (max-width: 900px)": "-80vw"
-    },
-    width: {
-      default: "30vw",
-      "@media (max-width: 900px)": "80vw"
-    },
+    left: 0,
+    top: '-100%',
+    width: '80vw',
     display: 'flex',
     flexDirection: 'column',
-    height: "100vh",
-    borderLeftStyle: "solid",
-    borderLeftWidth: 2,
-    borderLeftColor: colors.xBorderColor,
+    height: "100%",
+    borderRightStyle: "solid",
+    borderRightWidth: 2,
+    borderRightColor: colors.xBorderColor,
     willChange: 'transform',
     backgroundColor: colors.bg,
   },
@@ -171,7 +173,7 @@ const styles = stylex.create({
   content: {
     display: "grid",
     alignItems: 'center',
-    height: "100vh",
+    height: "100%",
   },
   body: {
     fontSize: text.p,
@@ -204,7 +206,7 @@ const styles = stylex.create({
     borderTopStyle: 'solid',
     borderTopWidth: '1px',
     borderTopColor: colors.xBorderColor,
-    width: '100vh',
+    width: '100%',
     display: 'grid',
     paddingBottom: spacing.sm,
     paddingTop: spacing.sm,
