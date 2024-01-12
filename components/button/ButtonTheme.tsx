@@ -41,7 +41,10 @@ const styles = stylex.create({
     paddingBlock: buttonTokens.paddingBlock,
     paddingInline: buttonTokens.paddingInline,
     cursor: "pointer",
-    fontSize: text.p
+    fontSize: {
+      default: text.p,
+      '@media (max-width: 900px)': 18
+    }
   },
   emphasise: {
     transform: "scale(1.1)",

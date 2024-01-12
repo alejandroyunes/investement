@@ -28,7 +28,6 @@ const s = stylex.create({
   container: {
     display: "flex",
     alignItems: "center",
-    outline: '1px solid red',
   },
   icon: {
     display: "flex",
@@ -38,7 +37,7 @@ const s = stylex.create({
       default: spacing.xxxs,
       '@media (max-width: 900px)': 0
     },
-    paddingLeft: spacing.xxxs,
+    paddingLeft: spacing.xxs,
     paddingTop: spacing.sm,
     paddingBottom: spacing.sm,
   }
