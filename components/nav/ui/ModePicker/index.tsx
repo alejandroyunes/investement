@@ -12,7 +12,7 @@ export default function ModePicker() {
 
   return (
     <div >
-      <div {...stylex.props(s.icon)}>
+      <div {...stylex.props(s.container)}>
         {theme === 'dark' ?
           <span {...stylex.props(s.icon)} onClick={() => setTheme('light')}><LightModeSvg /></span>
           :
@@ -28,6 +28,7 @@ const s = stylex.create({
   container: {
     display: "flex",
     alignItems: "center",
+    outline: '1px solid red',
   },
   icon: {
     display: "flex",
@@ -35,12 +36,11 @@ const s = stylex.create({
     color: colors.inverted,
     paddingRight: {
       default: spacing.xxxs,
-      '@media (max-width: 500px)': 0
+      '@media (max-width: 900px)': 0
     },
     paddingLeft: spacing.xxxs,
-    paddingTop: spacing.xs,
-    paddingBottom: spacing.xs,
-    outline: '1px solid red',
+    paddingTop: spacing.sm,
+    paddingBottom: spacing.sm,
   }
 })
 
