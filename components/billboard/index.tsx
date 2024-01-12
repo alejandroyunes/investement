@@ -128,6 +128,7 @@ const s = stylex.create({
   image: {
     objectFit: 'cover',
     width: '100%',
+    height: '100%'
   },
   slogan: {
     textTransform: 'uppercase',
@@ -147,7 +148,7 @@ const s = stylex.create({
   headingTitle: {
     fontSize: {
       default: text.h1,
-      '@media (max-width: 500px)': 18
+      '@media (max-width: 500px)': 28
     },
     color: colors.inverted,
     lineHeight: {
@@ -161,7 +162,7 @@ const s = stylex.create({
   headingSubTitle: {
     fontSize: {
       default: text.h1,
-      '@media (max-width: 500px)': 18
+      '@media (max-width: 500px)': 28
     },
     color: colors.primary,
     lineHeight: {
