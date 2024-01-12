@@ -17,7 +17,6 @@ export default function Billboard() {
     <section {...stylex.props(s.container)}>
 
       <div  {...stylex.props(s.left)}>
-
         <div {...stylex.props(s.topLeft)}>
           <div {...stylex.props(s.slogan)}>
             <h3>Optimize your investment growth</h3>
@@ -41,7 +40,6 @@ export default function Billboard() {
             </div>
           </div>
         </div>
-
       </div>
 
       <div {...stylex.props(s.right)}>
@@ -52,7 +50,7 @@ export default function Billboard() {
           width={0}
           height={0}
           sizes="100vw"
-          style={{ width: '100%', height: 'calc(100vh - 110px)' }}
+          style={{ width: '100%' }}
         />
         <div {...stylex.props(s.rightBg)} />
       </div>
@@ -78,37 +76,40 @@ const imageDarkSlideIn = stylex.keyframes({
   '100%': { backgroundSize: '0% 100%' },
 })
 
-
 const s = stylex.create({
   container: {
-    width: "100%",
     display: "grid",
     gridTemplateColumns: '1fr 1fr',
     margin: "0 auto",
     maxWidth: $.maxWidth,
+    height: '100%'
   },
   left: {
-    display: "inline-flex",
-    flexDirection: "column",
+    display: "flex",
+    flexDirection: 'column',
     justifyContent: 'space-between',
-    height: 'calc(100vh - 110px)',
     margin: `0 ${spacing.md}`,
     paddingLeft: {
       default: spacing.sm,
       '@media (max-width: 500px)': 0
     },
-
+    height: {
+      default: 'calc(90vh)',
+      '@media (max-width: 500px)': 'calc(80vh)',
+    },
+  },
+  right: {
+    position: 'relative',
+    height: {
+      default: 'calc(90vh)',
+      '@media (max-width: 500px)': 'calc(80vh)',
+    },
   },
   topLeft: {
     margin: 'auto 0',
   },
   bottomLeft: {
-    display: 'flex',
-    alignContent: 'flex-end',
-  },
-  right: {
-    width: '100%',
-    position: 'relative'
+    paddingBottom: spacing.xl
   },
   rightBg: {
     position: 'absolute',
@@ -126,9 +127,18 @@ const s = stylex.create({
     animationFillMode: 'forwards'
   },
   image: {
-    objectFit: 'cover',
-    width: '100%',
-    height: '100%'
+    objectFit: {
+      default: 'cover',
+      '@media (max-width: 500px)': 'none',
+    },
+    height: {
+      default: 'calc(90vh)',
+      '@media (max-width: 500px)': 'calc(80vh)',
+    },
+    transform: {
+      default: null,
+      '@media (max-width: 500px)': 'scaleX(-1)'
+    }
   },
   slogan: {
     textTransform: 'uppercase',
@@ -138,7 +148,10 @@ const s = stylex.create({
       '@media (max-width: 500px)': 14
     },
     color: colors.inverted,
-    paddingBottom: spacing.sm,
+    paddingBottom: {
+      default: spacing.sm,
+      '@media (max-width: 500px)': spacing.md
+    },
     paddingTop: spacing.xl,
     animationName: slideIn,
     animationDuration: '1.2s',
@@ -148,7 +161,7 @@ const s = stylex.create({
   headingTitle: {
     fontSize: {
       default: text.h1,
-      '@media (max-width: 500px)': 28
+      '@media (max-width: 500px)': 24
     },
     color: colors.inverted,
     lineHeight: {
@@ -162,7 +175,7 @@ const s = stylex.create({
   headingSubTitle: {
     fontSize: {
       default: text.h1,
-      '@media (max-width: 500px)': 28
+      '@media (max-width: 500px)': 24
     },
     color: colors.primary,
     lineHeight: {
@@ -174,15 +187,15 @@ const s = stylex.create({
     animationFillMode: "backwards",
   },
   button: {
-    paddingTop: spacing.xl,
+    paddingTop: spacing.xxxl,
     animationName: slideIn,
     animationDuration: "1s",
     animationDelay: '.5s',
     animationFillMode: "backwards",
-    color: 'green'
   },
   arrowDown: {
     transform: 'rotate(-45deg)',
+    width: 80
   },
   arrow: {
     animationName: pointingDown,
