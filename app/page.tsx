@@ -33,7 +33,7 @@ const s = stylex.create({
   desktopNav: {
     display: {
       default: "block",
-      ["@media (max-width: 900px)"]: "none"
+      "@media (max-width: 900px)": "none"
     },
   },
   mobileNav: {

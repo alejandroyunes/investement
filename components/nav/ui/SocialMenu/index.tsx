@@ -15,6 +15,14 @@ import Youtube from "@/components/Assets/Icons/Youtube"
 export default function Social() {
   const [open, setOpen] = useState<boolean>()
 
+  const handleClose = () => {
+    setOpen(false)
+
+    setTimeout(() => {
+      setOpen(undefined)
+    }, 500)
+  }
+
   return (
     <>
       <div {...stylex.props(styles.hamburgerMenu)} onClick={() => setOpen(!open)}>
@@ -31,7 +39,7 @@ export default function Social() {
             width={130}
             height={30}
           />
-          <div {...stylex.props(styles.animationExit)} onClick={() => setOpen(false)}>
+          <div {...stylex.props(styles.animationExit)} onClick={handleClose}>
             <ExitSvg />
           </div>
         </div>
@@ -82,7 +90,7 @@ export default function Social() {
 
       </div>
 
-      {open && <div {...stylex.props(styles.bg)} onClick={() => setOpen(false)} />}
+      {open && <div {...stylex.props(styles.bg)} onClick={handleClose} />}
     </>
   )
 }

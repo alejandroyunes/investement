@@ -33,7 +33,6 @@ export function MobileNav() {
         </div>
         <div {...stylex.props(styles.right)}>
           <ModePicker />
-          <Social />
         </div>
 
       </div>

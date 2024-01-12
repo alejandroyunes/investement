@@ -20,7 +20,7 @@ export default function MenuHamburger() {
 
     setTimeout(() => {
       setOpen(undefined)
-    }, 1000)
+    }, 500)
   }
 
   return (
@@ -48,40 +48,47 @@ export default function MenuHamburger() {
 
           <ul {...stylex.props(styles.body)}>
             <li {...stylex.props(styles.items)}>
-              <span {...stylex.props(styles.svg)}>
-                <Facebook />
-              </span>
-              <p {...stylex.props(styles.paragrah)}>
-                Facebook
+              <p {...stylex.props(styles.paragraph)}>
+                Home
               </p>
             </li>
             <li {...stylex.props(styles.items)}>
-              <span {...stylex.props(styles.svg)}>
-                <Instagram />
-              </span>
-              <p {...stylex.props(styles.paragrah)}>
-                Instagram
+              <p {...stylex.props(styles.paragraph)}>
+                Our Services
               </p>
             </li>
             <li {...stylex.props(styles.items)}>
-              <span {...stylex.props(styles.svg)}>
-                <Twitter />
-              </span>
-              <p {...stylex.props(styles.paragrah)}>
-                Twitter
+              <p {...stylex.props(styles.paragraph)}>
+                News
               </p>
             </li>
             <li {...stylex.props(styles.items)}>
-              <span {...stylex.props(styles.svg)}>
-                <Youtube />
-              </span>
-              <p {...stylex.props(styles.paragrah)}>
-                Youtube
+              <p {...stylex.props(styles.paragraph)}>
+                Blog
+              </p>
+            </li>
+            <li {...stylex.props(styles.items)}>
+              <p {...stylex.props(styles.paragraph)}>
+                Contact
               </p>
             </li>
           </ul>
 
           <div {...stylex.props(styles.contact)}>
+            <div {...stylex.props(styles.social)}>
+              <span {...stylex.props(styles.svg)}>
+                <Facebook />
+              </span>
+              <span {...stylex.props(styles.svg)}>
+                <Instagram />
+              </span>
+              <span {...stylex.props(styles.svg)}>
+                <Twitter />
+              </span>
+              <span {...stylex.props(styles.svg)}>
+                <Youtube />
+              </span>
+            </div>
             <p {...stylex.props(styles.contactTel)}>+1 800 555 44 88</p>
             <p {...stylex.props(styles.contactEmail)}>info@email.com</p>
           </div>
@@ -149,9 +156,9 @@ const styles = stylex.create({
   header: {
     display: 'flex',
     paddingLeft: {
-      default: spacing.xxl,
-      '@media (max-width: 1024px)': spacing.xl,
-    },
+      default: spacing.xl,
+      '@media (max-width: 500px)': spacing.md
+    }
   },
   logo: {
     marginTop: spacing.lg
@@ -180,14 +187,15 @@ const styles = stylex.create({
     color: colors.inverted,
     listStyleType: 'none',
     paddingLeft: {
-      default: spacing.xxl,
-      '@media (max-width: 1024px)': spacing.xl,
+      default: spacing.xl,
+      '@media (max-width: 500px)': spacing.md
     }
   },
   items: {
     display: 'flex',
     alignItems: 'center',
     marginBottom: spacing.xxs,
+    cursor: 'pointer',
   },
   svg: {
     backgroundColor: {
@@ -197,10 +205,10 @@ const styles = stylex.create({
     width: 50,
     height: 50,
     cursor: 'pointer',
+    marginRight: spacing.xxxs,
   },
-  paragrah: {
+  paragraph: {
     fontSize: text.h5,
-    marginLeft: spacing.xs,
   },
   contact: {
     borderTopStyle: 'solid',
@@ -211,10 +219,17 @@ const styles = stylex.create({
     paddingBottom: spacing.sm,
     paddingTop: spacing.sm,
   },
+  social: {
+    display: 'flex',
+    paddingLeft: {
+      default: spacing.xl,
+      '@media (max-width: 500px)': spacing.md
+    }
+  },
   contactTel: {
     paddingLeft: {
-      default: spacing.xxl,
-      '@media (max-width: 1024px)': spacing.xl,
+      default: spacing.xl,
+      '@media (max-width: 500px)': spacing.md
     },
     fontSize: text.h4,
     color: colors.inverted,
@@ -223,8 +238,8 @@ const styles = stylex.create({
   },
   contactEmail: {
     paddingLeft: {
-      default: spacing.xxl,
-      '@media (max-width: 1024px)': spacing.xl,
+      default: spacing.xl,
+      '@media (max-width: 500px)': spacing.md
     },
     fontSize: text.h5,
     color: colors.gray,
