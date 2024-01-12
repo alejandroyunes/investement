@@ -6,26 +6,18 @@ import LightModeSvg from "./icons/LightModeSvg"
 import DarkModeSvg from "./icons/DarkMode"
 
 import { useTheme } from "@/app/providers"
-import { useEffect } from "react"
 
 export default function ModePicker() {
   const { setTheme, theme } = useTheme()
 
-  console.log(theme)
-
   return (
     <div >
       <div {...stylex.props(s.icon)}>
-
-        {/* {theme === 'dark' ?
+        {theme === 'dark' ?
           <span {...stylex.props(s.icon)} onClick={() => setTheme('light')}><LightModeSvg /></span>
           :
           <span {...stylex.props(s.icon)} onClick={() => setTheme('dark')}><DarkModeSvg /></span>
-        } */}
-
-        <span {...stylex.props(s.icon)} onClick={() => setTheme('light')}><LightModeSvg /></span>
-        <span {...stylex.props(s.icon)} onClick={() => setTheme('dark')}><DarkModeSvg /></span>
-
+        }
       </div>
 
     </div >

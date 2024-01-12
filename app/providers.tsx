@@ -1,5 +1,8 @@
 "use client"
+import * as stylex from "@stylexjs/stylex"
 
+import { globalTokens as $, colors } from "./globalTokens.stylex"
+import { darkTheme, lightTheme } from './themes'
 
 import React, {
   ReactNode,
@@ -26,7 +29,6 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 export const ThemeProvider = ({ children }: Props) => {
 
   const isLocalStorageSupported = typeof window !== 'undefined' && window.localStorage
-
   const storeTheme = isLocalStorageSupported ? localStorage.getItem('theme') as Theme | null : null;
   const [theme, setTheme] = useState<Theme>(storeTheme || 'dark')
 
@@ -38,8 +40,12 @@ export const ThemeProvider = ({ children }: Props) => {
 
   return (
     <ThemeContext.Provider value={contextValue}>
-      {children}
-    </ThemeContext.Provider>
+      <html {...stylex.props(s.html, s.reset)} lang="es">
+        <body {...stylex.props(s.reset, s.body, theme === 'dark' ? darkTheme : lightTheme)}>
+          {children}
+        </body>
+      </html >
+    </ThemeContext.Provider >
   )
 }
 
@@ -50,3 +56,19 @@ export const useTheme = () => {
   }
   return context
 }
+
+const s = stylex.create({
+  html: {
+    colorScheme: "light dark"
+  },
+  reset: {
+    minHeight: "100%",
+    margin: 0,
+    padding: 0,
+  },
+  body: {
+    color: colors.inverted,
+    backgroundColor: colors.bg,
+    fontFamily: $.fontSans,
+  },
+})
