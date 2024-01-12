@@ -6,8 +6,6 @@ import Image from "next/image"
 import ModePicker from "../ui/ModePicker"
 import logo from '../../Assets/images/logo.webp'
 import { spacing } from "../../../app/globalTokens.stylex"
-import Social from "../ui/SocialMenu"
-import HorizontalHamburger from "@/components/Assets/Icons/HorizontalHamburger"
 import MenuHamburger from "../ui/MenuHamburger"
 
 export function MobileNav() {
@@ -18,9 +16,7 @@ export function MobileNav() {
 
   return (
     <nav {...stylex.props(styles.container)}>
-
       <div  {...stylex.props(styles.row)}>
-
         <div {...stylex.props(styles.left)}>
           <MenuHamburger />
           <Image
@@ -34,7 +30,6 @@ export function MobileNav() {
         <div {...stylex.props(styles.right)}>
           <ModePicker />
         </div>
-
       </div>
     </nav >
   )
@@ -44,12 +39,11 @@ const styles = stylex.create({
   container: {
     display: "flex",
     alignItems: "center",
-    padding: `0 ${spacing.md}`,
     margin: `${spacing.md} auto`,
   },
   logo: {
     marginRight: spacing.md,
-    marginLeft: spacing.xs
+    marginLeft: spacing.xs,
   },
   row: {
     display: "flex",
@@ -65,5 +59,4 @@ const styles = stylex.create({
     display: "flex",
     alignItems: "center",
   },
-
 })

@@ -122,8 +122,6 @@ const styles = stylex.create({
     cursor: "pointer",
     display: "flex",
     alignItems: "center",
-    marginLeft: spacing.xxs,
-    marginRight: spacing.xxs,
     zIndex: 4,
     transform: 'rotate(90deg)'
   },

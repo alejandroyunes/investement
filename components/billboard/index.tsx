@@ -23,11 +23,11 @@ export default function Billboard() {
             <h3>Optimize your investment growth</h3>
           </div>
           <div {...stylex.props(s.headingTitle)}>
-            <h2>Professional</h2>
+            <h1>Professional</h1>
           </div>
           <div {...stylex.props(s.headingSubTitle)}>
-            <h2>Investment</h2>
-            <h2>Company</h2>
+            <h1>Investment</h1>
+            <h1>Company</h1>
           </div>
           <div {...stylex.props(s.button)}>
             <ButtonTheme variant="primary" onClick={handleClick}>Explore</ButtonTheme>
@@ -93,10 +93,14 @@ const s = stylex.create({
     justifyContent: 'space-between',
     height: 'calc(100vh - 110px)',
     margin: `0 ${spacing.md}`,
-    paddingLeft: spacing.sm,
+    paddingLeft: {
+      default: spacing.sm,
+      '@media (max-width: 500px)': 0
+    },
+
   },
   topLeft: {
-    margin: 'auto 0'
+    margin: 'auto 0',
   },
   bottomLeft: {
     display: 'flex',
@@ -128,7 +132,10 @@ const s = stylex.create({
   slogan: {
     textTransform: 'uppercase',
     fontWeight: 'bold',
-    fontSize: text.sm,
+    fontSize: {
+      default: text.sm,
+      '@media (max-width: 500px)': 14
+    },
     color: colors.inverted,
     paddingBottom: spacing.sm,
     paddingTop: spacing.xl,
@@ -138,17 +145,29 @@ const s = stylex.create({
     animationFillMode: "backwards",
   },
   headingTitle: {
-    fontSize: text.h1,
+    fontSize: {
+      default: text.h1,
+      '@media (max-width: 500px)': 18
+    },
     color: colors.inverted,
-    lineHeight: spacing.xxl,
+    lineHeight: {
+      default: spacing.xxl,
+      '@media (max-width: 500px)': spacing.lg
+    },
     animationName: slideIn,
     animationDuration: "1s",
     animationFillMode: "backwards",
   },
   headingSubTitle: {
-    fontSize: text.h1,
+    fontSize: {
+      default: text.h1,
+      '@media (max-width: 500px)': 18
+    },
     color: colors.primary,
-    lineHeight: spacing.xxl,
+    lineHeight: {
+      default: spacing.xxl,
+      '@media (max-width: 500px)': spacing.lg
+    },
     animationName: slideIn,
     animationDuration: "1s",
     animationFillMode: "backwards",

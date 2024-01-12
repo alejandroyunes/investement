@@ -2,6 +2,7 @@ import * as stylex from "@stylexjs/stylex"
 import { DesktopNav } from "../components/nav/DesktopNav"
 import { MobileNav } from "../components/nav/Mobile"
 import Billboard from "@/components/billboard"
+import { spacing } from "./globalTokens.stylex"
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
       <div {...stylex.props(s.mobileNav)}>
         <MobileNav />
       </div>
-      {/* <Billboard /> */}
+      <Billboard />
     </div>
   )
 }
@@ -41,5 +42,6 @@ const s = stylex.create({
       default: "none",
       "@media (max-width: 900px)": "block"
     },
+    padding: `0 ${spacing.sm}`,
   }
 })

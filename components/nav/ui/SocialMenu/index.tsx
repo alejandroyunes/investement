@@ -13,7 +13,7 @@ import Instagram from "@/components/Assets/Icons/Instagram"
 import Youtube from "@/components/Assets/Icons/Youtube"
 
 export default function Social() {
-  const [open, setOpen] = useState<boolean>()
+  const [open, setOpen] = useState<boolean | undefined>()
 
   const handleClose = () => {
     setOpen(false)
@@ -30,7 +30,6 @@ export default function Social() {
       </div>
 
       <div {...stylex.props(styles.container, open && styles.slideIn, open === false && styles.slideOut)}>
-
         <div   {...stylex.props(styles.header)}>
           <Image
             {...stylex.props(styles.logo)}
@@ -116,7 +115,6 @@ const styles = stylex.create({
     display: "flex",
     alignItems: "center",
     marginLeft: spacing.xxs,
-    marginRight: spacing.xxs,
     zIndex: 4,
   },
   container: {
