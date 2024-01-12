@@ -1,3 +1,6 @@
+"use client"
+
+
 import { s } from "@/components/Assets/Icons/SearchSvg"
 import stylex from "@stylexjs/stylex"
 

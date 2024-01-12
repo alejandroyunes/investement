@@ -39,7 +39,7 @@ const styles = stylex.create({
   container: {
     display: "flex",
     alignItems: "center",
-    margin: `${spacing.md} auto`,
+    margin: `0 auto`,
   },
   logo: {
     marginRight: spacing.md,

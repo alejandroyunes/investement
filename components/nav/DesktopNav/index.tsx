@@ -44,10 +44,10 @@ const styles = stylex.create({
       default: globalTokens.maxWidth,
       "@media (min-width: 701px) and (max-width: 1260px)": "100%",
     },
-    margin: `${spacing.md} auto`,
+    margin: `0 auto`,
   },
   logo: {
-    marginRight: spacing.md
+    marginRight: spacing.md,
   },
   left: {
     display: "flex",

@@ -1,5 +1,4 @@
 import "./globals.css"
-
 import { ThemeProvider } from "./providers"
 
 export const metadata = {

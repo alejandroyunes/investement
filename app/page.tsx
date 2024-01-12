@@ -1,20 +1,32 @@
-import * as stylex from "@stylexjs/stylex"
+'use client'
+
+
 import { DesktopNav } from "../components/nav/DesktopNav"
 import { MobileNav } from "../components/nav/Mobile"
 import Billboard from "@/components/billboard"
-import { spacing } from "./globalTokens.stylex"
+import * as stylex from "@stylexjs/stylex"
+import { globalTokens as $, colors, spacing } from "./globalTokens.stylex"
+import { darkTheme, lightTheme } from './themes'
+import { ThemeProvider, useTheme } from "./providers"
 
 export default function Home() {
+
+  const { setTheme, theme } = useTheme()
   return (
-    <div {...stylex.props(s.container)}>
-      <div {...stylex.props(s.desktopNav)}>
-        <DesktopNav />
-      </div>
-      <div {...stylex.props(s.mobileNav)}>
-        <MobileNav />
-      </div>
-      <Billboard />
-    </div>
+    <html {...stylex.props(s.html, s.reset)} lang="es">
+      <body {...stylex.props(s.reset, s.body, theme === 'dark' ? darkTheme : lightTheme)}>
+
+        <div {...stylex.props(s.container)}>
+          <div {...stylex.props(s.desktopNav)}>
+            <DesktopNav />
+          </div>
+          <div {...stylex.props(s.mobileNav)}>
+            <MobileNav />
+          </div>
+          <Billboard />
+        </div>
+      </body>
+    </html>
   )
 }
 
@@ -24,6 +36,19 @@ const fadeIn = stylex.keyframes({
 })
 
 const s = stylex.create({
+  html: {
+    colorScheme: "light dark"
+  },
+  reset: {
+    minHeight: "100%",
+    margin: 0,
+    padding: 0,
+  },
+  body: {
+    color: colors.inverted,
+    backgroundColor: colors.bg,
+    fontFamily: $.fontSans,
+  },
   container: {
     animationName: fadeIn,
     animationDuration: '2.5s',

@@ -1,4 +1,6 @@
 "use client"
+
+
 import React, {
   ReactNode,
   createContext,
@@ -8,10 +10,6 @@ import React, {
   SetStateAction,
   useEffect,
 } from 'react'
-import * as stylex from "@stylexjs/stylex"
-import { globalTokens as $, colors } from "./globalTokens.stylex"
-
-import { darkTheme, lightTheme } from './themes'
 
 type Props = {
   children?: ReactNode
@@ -40,11 +38,7 @@ export const ThemeProvider = ({ children }: Props) => {
 
   return (
     <ThemeContext.Provider value={contextValue}>
-      <html {...stylex.props(s.html, s.reset)} lang="es">
-        <body {...stylex.props(s.reset, s.body, theme === 'dark' ? darkTheme : lightTheme)}>
-          {children}
-        </body>
-      </html>
+      {children}
     </ThemeContext.Provider>
   )
 }
@@ -56,19 +50,3 @@ export const useTheme = () => {
   }
   return context
 }
-
-const s = stylex.create({
-  html: {
-    colorScheme: "light dark"
-  },
-  reset: {
-    minHeight: "100%",
-    margin: 0,
-    padding: 0,
-  },
-  body: {
-    color: colors.inverted,
-    backgroundColor: colors.bg,
-    fontFamily: $.fontSans,
-  }
-})

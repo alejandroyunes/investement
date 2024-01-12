@@ -89,10 +89,9 @@ export default function MenuHamburger() {
                 <Youtube />
               </span>
             </div>
-            <p {...stylex.props(styles.contactTel)}>+1 800 555 44 88</p>
-            <p {...stylex.props(styles.contactEmail)}>info@email.com</p>
+            <a href="tel:+1-555-555-5555" {...stylex.props(styles.contactTel)}>+1 800 555 5555</a>
+            <a href="mailto:tinfo@email.com" {...stylex.props(styles.contactEmail)}>info@email.com</a>
           </div>
-
         </div>
 
       </div>
