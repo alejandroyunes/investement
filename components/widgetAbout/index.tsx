@@ -73,8 +73,14 @@ const s = stylex.create({
 
   },
   imageL: {
-    maxWidth: 300,
-    height: 400,
+    maxWidth: {
+      default: 300,
+      '@media (max-width: 500px)': 260
+    },
+    height: {
+      default: 400,
+      // '@media (max-width: 748px)': 340
+    },
     objectFit: 'cover',
     float: 'left',
 
@@ -83,9 +89,21 @@ const s = stylex.create({
     paddingTop: spacing.xxxl,
     objectFit: 'contain',
     float: 'right',
-    maxWidth: 400,
-    height: 400,
-    marginTop: -333
+    maxWidth: {
+      default: 399,
+      '@media (max-width: 747px) and (min-width: 500px)': 320,
+      '@media (max-width: 500px)': 280,
+    },
+    height: {
+      default: 399,
+    },
+    marginTop: {
+      default: -333,
+      '@media (max-width: 900px) and (min-width: 668px)': -20,
+      '@media (max-width: 667px) and (min-width: 500px)': -380,
+      '@media (max-width: 500px)': -380,
+
+    }
   },
   right: {
     display: 'flex',
