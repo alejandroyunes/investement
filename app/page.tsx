@@ -1,9 +1,13 @@
 'use client'
+
+import { globalTokens as $ } from '../app/globalTokens.stylex'
 import { DesktopNav } from "../components/nav/DesktopNav"
 import { MobileNav } from "../components/nav/Mobile"
 import Billboard from "@/components/billboard"
 import * as stylex from "@stylexjs/stylex"
 import { spacing } from "./globalTokens.stylex"
+import WidgetCeo from "@/components/widgetCeo"
+import WidgetService from "@/components/widgetService"
 
 export default function Home() {
 
@@ -16,6 +20,8 @@ export default function Home() {
         <MobileNav />
       </div>
       <Billboard />
+      <WidgetCeo />
+      <WidgetService />
     </div>
   )
 }
@@ -31,7 +37,10 @@ const s = stylex.create({
     animationDuration: '2.5s',
     animationFillMode: 'forwards',
     animationIterationCount: 1,
-    animationTimingFunction: 'ease-in-out'
+    animationTimingFunction: 'ease-in-out',
+    maxWidth: $.maxWidth,
+    padding: `0 ${spacing.md}`,
+    margin: `0 auto`
   },
   desktopNav: {
     display: {

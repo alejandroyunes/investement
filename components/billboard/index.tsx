@@ -81,7 +81,6 @@ const s = stylex.create({
     display: "grid",
     gridTemplateColumns: '1fr 1fr',
     margin: "0 auto",
-    maxWidth: $.maxWidth,
     height: '100%'
   },
   left: {

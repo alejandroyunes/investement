@@ -39,12 +39,6 @@ const styles = stylex.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    padding: `0 ${spacing.md}`,
-    width: {
-      default: globalTokens.maxWidth,
-      "@media (min-width: 701px) and (max-width: 1260px)": "100%",
-    },
-    margin: `0 auto`,
   },
   logo: {
     marginRight: spacing.md,
