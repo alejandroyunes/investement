@@ -8,6 +8,7 @@ import * as stylex from "@stylexjs/stylex"
 import { spacing } from "./globalTokens.stylex"
 import WidgetCeo from "@/components/widgetCeo"
 import WidgetService from "@/components/widgetService"
+import WidgetAbout from '@/components/widgetAbout'
 
 export default function Home() {
 
@@ -22,6 +23,7 @@ export default function Home() {
       <Billboard />
       <WidgetCeo />
       <WidgetService />
+      <WidgetAbout />
     </div>
   )
 }
