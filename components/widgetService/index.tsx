@@ -115,10 +115,12 @@ const s = stylex.create({
     left: '50%',
     transform: 'translate(-50%, 0)',
     cursor: 'pointer',
-    whiteSpace: 'nowrap'
+    whiteSpace: 'nowrap',
+    color: colors.white
   },
   textContainer: {
     fontSize: text.h4,
+    color: colors.white
   },
   image: {
     width: '100%',

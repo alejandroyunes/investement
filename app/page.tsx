@@ -9,6 +9,8 @@ import { spacing } from "./globalTokens.stylex"
 import WidgetCeo from "@/components/widgetCeo"
 import WidgetService from "@/components/widgetService"
 import WidgetAbout from '@/components/widgetAbout'
+import WidgetPartner from '@/components/widgetPartners'
+import WidgetBlog from '@/components/widgetBlog'
 
 export default function Home() {
 
@@ -20,10 +22,12 @@ export default function Home() {
       <div {...stylex.props(s.mobileNav)}>
         <MobileNav />
       </div>
-      <Billboard />
+      {/* <Billboard />
       <WidgetCeo />
       <WidgetService />
       <WidgetAbout />
+      <WidgetPartner /> */}
+      <WidgetBlog />
     </div>
   )
 }
