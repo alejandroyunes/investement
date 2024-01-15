@@ -23,12 +23,12 @@ export default function Home() {
       <div {...stylex.props(s.mobileNav)}>
         <MobileNav />
       </div>
-      {/* <Billboard />
+      <Billboard />
       <WidgetCeo />
       <WidgetService />
       <WidgetAbout />
       <WidgetPartner />
-      <WidgetBlog /> */}
+      <WidgetBlog />
       <WidgetGetInTouch />
     </div>
   )
