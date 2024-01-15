@@ -129,6 +129,6 @@ const s = stylex.create({
   button: {
     display: 'flex',
     justifyContent: 'center',
-    margin: `${spacing.xl} auto ${spacing.xxxl}`,
+    margin: `${spacing.xl} auto ${spacing.xxl}`,
   }
 })

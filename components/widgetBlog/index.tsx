@@ -148,7 +148,8 @@ const s = stylex.create({
     color: colors.gray
   },
   button: {
-    textAlign: 'center'
+    margin: `0 auto ${spacing.xxl}`,
+    textAlign: 'center',
   },
   left: {},
   center: {},
