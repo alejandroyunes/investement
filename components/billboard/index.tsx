@@ -4,6 +4,7 @@ import { globalTokens as $, colors, spacing, text } from "../../app/globalTokens
 import Link from "next/link"
 import Image from "next/image"
 import invest from './assets/invest.jpg'
+import billboardImg from './assets/billboard-3.webp'
 import ButtonTheme from "../button/ButtonTheme"
 import Arrow from "../Assets/Icons/Arrow"
 
@@ -43,9 +44,10 @@ export default function Billboard() {
       </div>
 
       <div {...stylex.props(s.right)}>
+        {/* <a href="https://www.freepik.com/free-photo/cheerful-businessman-enjoying-success_3296004.htm#query=business%20man&position=7&from_view=search&track=ais&uuid=098a6b4f-e1a5-43d3-9fa7-fce477f1cf65">Image by katemangostar</a> */}
         <Image
           {...stylex.props(s.image)}
-          src={invest}
+          src={billboardImg}
           alt="alt"
           width={0}
           height={0}

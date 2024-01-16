@@ -4,7 +4,7 @@ import Image from "next/image"
 import logo from '../../Assets/images/logo.webp'
 
 
-import { globalTokens, spacing } from "../../../app/globalTokens.stylex"
+import { colors, globalTokens, spacing, text } from "../../../app/globalTokens.stylex"
 import ModePicker from "../ui/ModePicker"
 import Menu from "../ui/Menu"
 import Social from "../ui/SocialMenu"
@@ -15,13 +15,14 @@ export function DesktopNav() {
     <nav {...stylex.props(styles.container)}>
 
       <div  {...stylex.props(styles.left)}>
-        <Image
+        {/* <Image
           {...stylex.props(styles.logo)}
           src={logo}
           alt="alt"
           width={130}
           height={30}
-        />
+        /> */}
+        <p {...stylex.props(styles.invert)}>Inver<span {...stylex.props(styles.capital)}>Capital</span></p>
         <Menu />
       </div>
 
@@ -40,8 +41,13 @@ const styles = stylex.create({
     alignItems: "center",
     justifyContent: "space-between",
   },
-  logo: {
+  invert: {
     marginRight: spacing.md,
+    fontSize: text.h3
+  },
+  capital: {
+    color: colors.primary,
+    fontWeight: 'bold'
   },
   left: {
     display: "flex",

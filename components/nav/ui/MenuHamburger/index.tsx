@@ -32,13 +32,14 @@ export default function MenuHamburger() {
       <div {...stylex.props(styles.container, open && styles.slideIn, open === false && styles.slideOut)}>
 
         <div   {...stylex.props(styles.header)}>
-          <Image
+          {/* <Image
             {...stylex.props(styles.logo)}
             src={logo}
             alt="alt"
             width={130}
             height={30}
-          />
+          /> */}
+          <p {...stylex.props(styles.invert)}>Inver<span {...stylex.props(styles.capital)}>Capital</span></p>
           <div {...stylex.props(styles.animationExit)} onClick={handleClose}>
             <ExitSvg />
           </div>
@@ -159,6 +160,15 @@ const styles = stylex.create({
   },
   logo: {
     marginTop: spacing.lg
+  },
+  invert: {
+    marginTop: spacing.lg,
+    marginRight: spacing.md,
+    fontSize: text.h3
+  },
+  capital: {
+    color: colors.primary,
+    fontWeight: 'bold'
   },
   animationExit: {
     display: "flex",

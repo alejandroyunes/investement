@@ -5,7 +5,7 @@ import * as stylex from "@stylexjs/stylex"
 import Image from "next/image"
 import ModePicker from "../ui/ModePicker"
 import logo from '../../Assets/images/logo.webp'
-import { spacing } from "../../../app/globalTokens.stylex"
+import { colors, spacing, text } from "../../../app/globalTokens.stylex"
 import MenuHamburger from "../ui/MenuHamburger"
 
 export function MobileNav() {
@@ -19,13 +19,15 @@ export function MobileNav() {
       <div  {...stylex.props(styles.row)}>
         <div {...stylex.props(styles.left)}>
           <MenuHamburger />
-          <Image
+          {/* <Image
             {...stylex.props(styles.logo)}
             src={logo}
             alt="alt"
             width={130}
             height={30}
-          />
+          /> */}
+          <p {...stylex.props(styles.invert)}>Inver<span {...stylex.props(styles.capital)}>Capital</span></p>
+
         </div>
         <div {...stylex.props(styles.right)}>
           <ModePicker />
@@ -44,6 +46,14 @@ const styles = stylex.create({
   logo: {
     marginRight: spacing.md,
     marginLeft: spacing.xs,
+  },
+  invert: {
+    marginRight: spacing.md,
+    fontSize: text.h3
+  },
+  capital: {
+    color: colors.primary,
+    fontWeight: 'bold'
   },
   row: {
     display: "flex",

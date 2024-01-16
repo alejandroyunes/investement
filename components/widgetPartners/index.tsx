@@ -78,10 +78,6 @@ const s = stylex.create({
   partner: {
     maxWidth: 160,
     height: 65,
-    opacity: {
-      default: .5,
-      ':hover': 1
-    }
   },
   right: {
     display: 'flex',

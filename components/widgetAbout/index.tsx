@@ -1,8 +1,8 @@
 'use client'
 import * as stylex from "@stylexjs/stylex"
 import { colors, spacing, text } from "../../app/globalTokens.stylex"
-import about from './assets/about.jpg'
-import abouttwo from './assets/about2.jpg'
+import about from './assets/about7.webp'
+import abouttwo from './assets/about4.webp'
 import Image from "next/image"
 import ButtonTheme from "../button/ButtonTheme"
 
@@ -14,6 +14,7 @@ export default function WidgetAbout() {
   return (
     <section {...stylex.props(s.container)}>
       <div {...stylex.props(s.left)}>
+        {/* <a href="https://www.freepik.com/free-photo/happy-male-entrepreneur-reading-email-laptop-while-working-office_26390438.htm#page=2&query=business%20and%20computer&position=1&from_view=search&track=ais&uuid=79941738-8308-42f4-a131-2cadc372de65">Image by Drazen Zigic</a> on Freepik */}
         <Image
           {...stylex.props(s.imageL)}
           src={about}
@@ -21,6 +22,7 @@ export default function WidgetAbout() {
           width={0}
           height={0}
         />
+        {/* Image by <a href="https://www.freepik.com/free-photo/smiling-businesspeople-working-with-laptop_962034.htm#page=2&query=business%20and%20computer&position=5&from_view=search&track=ais&uuid=79941738-8308-42f4-a131-2cadc372de65">Freepik</a> */}
         <Image
           {...stylex.props(s.imageR)}
           src={abouttwo}
@@ -62,9 +64,10 @@ const s = stylex.create({
     },
   },
   left: {
-    position: 'relative',
+    transform: 'scaleX(-1)'
   },
   imageL: {
+    // transform: 'scaleX(-1)',
     maxWidth: {
       default: 300,
       '@media (max-width: 500px)': 260

@@ -35,11 +35,14 @@ export default function WidgetFooter() {
         </div>
         <div {...stylex.props(s.middleR)}>
           <p {...stylex.props(s.title)}>Office</p>
-          <p>Germany, 4595 Berliner Str.</p>
-          <a href="tel:+1-555-555-5555">+1 800 555 5555</a>
-          <br />
-          <a href="mailto:tinfo@email.com">info@email.com</a>
+          <p {...stylex.props(s.text)}>Germany, 4595 Berliner Str.</p>
+          <p {...stylex.props(s.text)}>
+            <a {...stylex.props(s.text)} href="tel:+1-555-555-5555">+1 800 555 5555</a>
+          </p>
 
+          <p {...stylex.props(s.text)}>
+            <a {...stylex.props(s.text)} href="mailto:tinfo@email.com">info@email.com</a>
+          </p>
         </div>
 
         <div {...stylex.props(s.right)}>
@@ -118,6 +121,9 @@ const s = stylex.create({
   },
   left: {},
   middleL: {},
+  text: {
+    paddingBottom: spacing.xs
+  },
   imageL: {
     width: '100%',
     height: 'auto',
@@ -127,7 +133,10 @@ const s = stylex.create({
     maxWidth: 300
   },
   right: {
-    textAlign: 'center'
+    textAlign: {
+      default: 'center',
+      '@media (max-width: 900px)': 'left'
+    }
   },
 
 })
