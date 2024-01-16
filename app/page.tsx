@@ -12,6 +12,7 @@ import WidgetAbout from '@/components/widgetAbout'
 import WidgetPartner from '@/components/widgetPartners'
 import WidgetBlog from '@/components/widgetBlog'
 import WidgetGetInTouch from '@/components/widgetGetInTouch'
+import WidgetFooter from '@/components/widgetFooter'
 
 export default function Home() {
 
@@ -30,6 +31,7 @@ export default function Home() {
       <WidgetPartner />
       <WidgetBlog />
       <WidgetGetInTouch />
+      <WidgetFooter />
     </div>
   )
 }
@@ -61,6 +63,5 @@ const s = stylex.create({
       default: "none",
       "@media (max-width: 900px)": "block"
     },
-    padding: `0 ${spacing.sm}`,
   }
 })
