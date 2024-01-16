@@ -1,9 +1,9 @@
 'use client'
 import * as stylex from "@stylexjs/stylex"
-import { colors, spacing, text } from "../../app/globalTokens.stylex"
+import { colors, spacing, text } from "../../../app/globalTokens.stylex"
 import service from './assets/service3.webp'
 import Image from "next/image"
-import ButtonTheme from "../button/ButtonTheme"
+import ButtonTheme from "../../button/ButtonTheme"
 
 export default function WidgetService() {
   const handleClick = () => {

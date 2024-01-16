@@ -1,6 +1,6 @@
 'use client'
 import * as stylex from "@stylexjs/stylex"
-import { spacing } from "../../app/globalTokens.stylex"
+import { spacing } from "../../../app/globalTokens.stylex"
 import ceo from './assets/widget-ceo1.webp'
 import Image from "next/image"
 
@@ -51,10 +51,7 @@ const s = stylex.create({
       '@media (max-width: 900px)': 'repeat(1, 1fr)'
     },
     gap: spacing.xs,
-    margin: {
-      default: `${spacing.xxxl} auto`,
-      '@media (max-width: 900px)': `${spacing.xl} auto`
-    },
+    margin: `${spacing.xxxl} auto`,
   },
   left: {
     display: 'flex',

@@ -1,6 +1,6 @@
 'use client'
 import * as stylex from "@stylexjs/stylex"
-import { colors, spacing, text } from "../../app/globalTokens.stylex"
+import { colors, spacing, text } from "../../../app/globalTokens.stylex"
 import Image from "next/image"
 import logo from '../../components/Assets/images/logo.webp'
 import map from './assets/mapsGermanyjpb.jpg'
@@ -22,7 +22,7 @@ export default function WidgetFooter() {
             width={120}
             height={30}
           /> */}
-          <p {...stylex.props(s.capital)}>Capital<span {...stylex.props(s.invest)}>Invest</span></p>
+          <p {...stylex.props(s.capital)}>Capita<span {...stylex.props(s.invest)}>||nvest</span></p>
 
 
         </div>

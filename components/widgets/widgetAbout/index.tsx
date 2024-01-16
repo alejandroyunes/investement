@@ -1,10 +1,10 @@
 'use client'
 import * as stylex from "@stylexjs/stylex"
-import { colors, spacing, text } from "../../app/globalTokens.stylex"
+import { colors, spacing, text } from "../../../app/globalTokens.stylex"
 import about from './assets/about7.webp'
 import abouttwo from './assets/about4.webp'
 import Image from "next/image"
-import ButtonTheme from "../button/ButtonTheme"
+import ButtonTheme from "../../button/ButtonTheme"
 
 export default function WidgetAbout() {
   const handleClick = () => {

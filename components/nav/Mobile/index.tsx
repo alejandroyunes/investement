@@ -15,21 +15,21 @@ export function MobileNav() {
   }
 
   return (
-    <nav {...stylex.props(styles.container)}>
-      <div  {...stylex.props(styles.row)}>
-        <div {...stylex.props(styles.left)}>
+    <nav {...stylex.props(s.container)}>
+      <div  {...stylex.props(s.row)}>
+        <div {...stylex.props(s.left)}>
           <MenuHamburger />
           {/* <Image
-            {...stylex.props(styles.logo)}
+            {...stylex.props(s.logo)}
             src={logo}
             alt="alt"
             width={130}
             height={30}
           /> */}
-          <p {...stylex.props(styles.invert)}>Inver<span {...stylex.props(styles.capital)}>Capital</span></p>
+          <p {...stylex.props(s.capital)}>Capita<span {...stylex.props(s.invest)}>||nvest</span></p>
 
         </div>
-        <div {...stylex.props(styles.right)}>
+        <div {...stylex.props(s.right)}>
           <ModePicker />
         </div>
       </div>
@@ -37,7 +37,7 @@ export function MobileNav() {
   )
 }
 
-const styles = stylex.create({
+const s = stylex.create({
   container: {
     display: "flex",
     alignItems: "center",
@@ -47,11 +47,11 @@ const styles = stylex.create({
     marginRight: spacing.md,
     marginLeft: spacing.xs,
   },
-  invert: {
-    marginRight: spacing.md,
-    fontSize: text.h3
-  },
   capital: {
+    fontSize: text.h3,
+  },
+  invest: {
+    fontSize: text.h3,
     color: colors.primary,
     fontWeight: 'bold'
   },

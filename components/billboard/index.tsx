@@ -4,7 +4,7 @@ import { globalTokens as $, colors, spacing, text } from "../../app/globalTokens
 import Link from "next/link"
 import Image from "next/image"
 import invest from './assets/invest.jpg'
-import billboardImg from './assets/billboard-3.webp'
+import billboardImg from './assets/billboard-4.jpg'
 import ButtonTheme from "../button/ButtonTheme"
 import Arrow from "../Assets/Icons/Arrow"
 
@@ -89,11 +89,14 @@ const s = stylex.create({
     display: "flex",
     flexDirection: 'column',
     justifyContent: 'space-between',
-    margin: `0 ${spacing.md}`,
-    paddingLeft: {
-      default: spacing.sm,
-      '@media (max-width: 500px)': 0
+    margin: {
+      default: `0 ${spacing.md}`,
+      '@media (max-width: 500px)': `0 ${spacing.xs} 0 0`
     },
+    // paddingLeft: {
+    //   default: spacing.sm,
+    //   '@media (max-width: 500px)': 0
+    // },
     height: {
       default: 'calc(90vh)',
       '@media (max-width: 500px)': 'calc(80vh)',
@@ -138,7 +141,7 @@ const s = stylex.create({
     },
     transform: {
       default: null,
-      '@media (max-width: 500px)': 'scaleX(-1)'
+      // '@media (max-width: 500px)': 'scaleX(-1)'
     }
   },
   slogan: {

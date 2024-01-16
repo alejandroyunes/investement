@@ -1,9 +1,9 @@
 'use client'
 import * as stylex from "@stylexjs/stylex"
-import { colors, spacing, text } from "../../app/globalTokens.stylex"
+import { colors, spacing, text } from "../../../app/globalTokens.stylex"
 
-import MobileSvg from "../Assets/Icons/MobileSvg"
-import LocationSvg from "../Assets/Icons/LocationSvg"
+import MobileSvg from "../../Assets/Icons/MobileSvg"
+import LocationSvg from "../../Assets/Icons/LocationSvg"
 
 export default function WidgetGetInTouch() {
   const handleClick = () => {

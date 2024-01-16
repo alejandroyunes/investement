@@ -1,6 +1,6 @@
 'use client'
 import * as stylex from "@stylexjs/stylex"
-import { colors, spacing, text } from "../../app/globalTokens.stylex"
+import { colors, spacing, text } from "../../../app/globalTokens.stylex"
 import partner1 from './assets/partner1.webp'
 import partner2 from './assets/partner2.webp'
 import partner3 from './assets/partner3.webp'

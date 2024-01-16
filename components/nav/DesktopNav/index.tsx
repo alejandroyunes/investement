@@ -22,7 +22,7 @@ export function DesktopNav() {
           width={130}
           height={30}
         /> */}
-        <p {...stylex.props(s.capital)}>Capital<span {...stylex.props(s.invest)}>Invest</span></p>
+        <p {...stylex.props(s.capital)}>Capita<span {...stylex.props(s.invest)}>||nvest</span></p>
 
         <Menu />
       </div>

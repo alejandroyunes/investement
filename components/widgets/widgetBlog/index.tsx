@@ -1,11 +1,11 @@
 'use client'
 import * as stylex from "@stylexjs/stylex"
-import { colors, spacing, text } from "../../app/globalTokens.stylex"
+import { colors, spacing, text } from "../../../app/globalTokens.stylex"
 import blog from './assets/blog.jpg'
 
 
 import Image from "next/image"
-import ButtonTheme from "../button/ButtonTheme"
+import ButtonTheme from "../../button/ButtonTheme"
 
 export default function WidgetBlog() {
   const handleClick = () => {
@@ -120,7 +120,10 @@ const s = stylex.create({
     height: 'auto',
   },
   description: {
-    padding: `${spacing.sm} ${spacing.xl} ${spacing.xl}`,
+    padding: {
+      default: `${spacing.sm} ${spacing.xl} ${spacing.xl}`,
+      '@media (max-width: 900px)': `${spacing.sm} ${spacing.sm} ${spacing.xl}`
+    },
     fontSize: text.h4,
     position: 'relative'
   },
