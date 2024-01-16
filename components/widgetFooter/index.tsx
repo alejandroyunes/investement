@@ -16,12 +16,15 @@ export default function WidgetFooter() {
 
       <div {...stylex.props(s.container)}>
         <div {...stylex.props(s.left)}>
-          <Image
+          {/* <Image
             src={logo}
             alt="alt"
             width={120}
             height={30}
-          />
+          /> */}
+          <p {...stylex.props(s.capital)}>Capital<span {...stylex.props(s.invest)}>Invest</span></p>
+
+
         </div>
 
         <div {...stylex.props(s.middleL)}>
@@ -118,6 +121,14 @@ const s = stylex.create({
     borderTopStyle: "solid",
     borderTopColor: colors.xBorderColor,
     padding: `${spacing.lg} 0`
+  },
+  capital: {
+    fontSize: text.h3,
+  },
+  invest: {
+    fontSize: text.h3,
+    color: colors.primary,
+    fontWeight: 'bold'
   },
   left: {},
   middleL: {},

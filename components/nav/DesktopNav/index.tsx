@@ -12,9 +12,9 @@ import Social from "../ui/SocialMenu"
 export function DesktopNav() {
 
   return (
-    <nav {...stylex.props(styles.container)}>
+    <nav {...stylex.props(s.container)}>
 
-      <div  {...stylex.props(styles.left)}>
+      <div  {...stylex.props(s.left)}>
         {/* <Image
           {...stylex.props(styles.logo)}
           src={logo}
@@ -22,11 +22,12 @@ export function DesktopNav() {
           width={130}
           height={30}
         /> */}
-        <p {...stylex.props(styles.invert)}>Inver<span {...stylex.props(styles.capital)}>Capital</span></p>
+        <p {...stylex.props(s.capital)}>Capital<span {...stylex.props(s.invest)}>Invest</span></p>
+
         <Menu />
       </div>
 
-      <div {...stylex.props(styles.right)}>
+      <div {...stylex.props(s.right)}>
         <ModePicker />
         <Social />
       </div>
@@ -34,18 +35,19 @@ export function DesktopNav() {
   )
 }
 
-const styles = stylex.create({
+const s = stylex.create({
   container: {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
   },
-  invert: {
-    marginRight: spacing.md,
-    fontSize: text.h3
-  },
   capital: {
+    fontSize: text.h3,
+  },
+  invest: {
+    marginRight: spacing.md,
+    fontSize: text.h3,
     color: colors.primary,
     fontWeight: 'bold'
   },

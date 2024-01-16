@@ -25,79 +25,80 @@ export default function MenuHamburger() {
 
   return (
     <>
-      <div {...stylex.props(styles.hamburgerMenu)} onClick={() => setOpen(!open)}>
+      <div {...stylex.props(s.hamburgerMenu)} onClick={() => setOpen(!open)}>
         <VerticalHamburger />
       </div>
 
-      <div {...stylex.props(styles.container, open && styles.slideIn, open === false && styles.slideOut)}>
+      <div {...stylex.props(s.container, open && s.slideIn, open === false && s.slideOut)}>
 
-        <div   {...stylex.props(styles.header)}>
+        <div   {...stylex.props(s.header)}>
           {/* <Image
-            {...stylex.props(styles.logo)}
+            {...stylex.props(s.logo)}
             src={logo}
             alt="alt"
             width={130}
             height={30}
           /> */}
-          <p {...stylex.props(styles.invert)}>Inver<span {...stylex.props(styles.capital)}>Capital</span></p>
-          <div {...stylex.props(styles.animationExit)} onClick={handleClose}>
+          <p {...stylex.props(s.capital)}>Capital<span {...stylex.props(s.invest)}>Invest</span></p>
+
+          <div {...stylex.props(s.animationExit)} onClick={handleClose}>
             <ExitSvg />
           </div>
         </div>
 
-        <div {...stylex.props(styles.content)}>
+        <div {...stylex.props(s.content)}>
 
-          <ul {...stylex.props(styles.body)}>
-            <li {...stylex.props(styles.items)}>
-              <p {...stylex.props(styles.paragraph)}>
+          <ul {...stylex.props(s.body)}>
+            <li {...stylex.props(s.items)}>
+              <p {...stylex.props(s.paragraph)}>
                 Home
               </p>
             </li>
-            <li {...stylex.props(styles.items)}>
-              <p {...stylex.props(styles.paragraph)}>
+            <li {...stylex.props(s.items)}>
+              <p {...stylex.props(s.paragraph)}>
                 Our Services
               </p>
             </li>
-            <li {...stylex.props(styles.items)}>
-              <p {...stylex.props(styles.paragraph)}>
+            <li {...stylex.props(s.items)}>
+              <p {...stylex.props(s.paragraph)}>
                 News
               </p>
             </li>
-            <li {...stylex.props(styles.items)}>
-              <p {...stylex.props(styles.paragraph)}>
+            <li {...stylex.props(s.items)}>
+              <p {...stylex.props(s.paragraph)}>
                 Blog
               </p>
             </li>
-            <li {...stylex.props(styles.items)}>
-              <p {...stylex.props(styles.paragraph)}>
+            <li {...stylex.props(s.items)}>
+              <p {...stylex.props(s.paragraph)}>
                 Contact
               </p>
             </li>
           </ul>
 
-          <div {...stylex.props(styles.contact)}>
-            <div {...stylex.props(styles.social)}>
-              <span {...stylex.props(styles.svg)}>
+          <div {...stylex.props(s.contact)}>
+            <div {...stylex.props(s.social)}>
+              <span {...stylex.props(s.svg)}>
                 <Facebook />
               </span>
-              <span {...stylex.props(styles.svg)}>
+              <span {...stylex.props(s.svg)}>
                 <Instagram />
               </span>
-              <span {...stylex.props(styles.svg)}>
+              <span {...stylex.props(s.svg)}>
                 <Twitter />
               </span>
-              <span {...stylex.props(styles.svg)}>
+              <span {...stylex.props(s.svg)}>
                 <Youtube />
               </span>
             </div>
-            <a href="tel:+1-555-555-5555" {...stylex.props(styles.contactTel)}>+1 800 555 5555</a>
-            <a href="mailto:tinfo@email.com" {...stylex.props(styles.contactEmail)}>info@email.com</a>
+            <a href="tel:+1-555-555-5555" {...stylex.props(s.contactTel)}>+1 800 555 5555</a>
+            <a href="mailto:tinfo@email.com" {...stylex.props(s.contactEmail)}>info@email.com</a>
           </div>
         </div>
 
       </div>
 
-      {open && <div {...stylex.props(styles.bg)} onClick={handleClose} />}
+      {open && <div {...stylex.props(s.bg)} onClick={handleClose} />}
     </>
   )
 }
@@ -117,13 +118,14 @@ const fadeIn = stylex.keyframes({
   '100%': { visibility: 'visible', opacity: 1 },
 })
 
-const styles = stylex.create({
+const s = stylex.create({
   hamburgerMenu: {
     cursor: "pointer",
     display: "flex",
     alignItems: "center",
     zIndex: 4,
-    transform: 'rotate(90deg)'
+    transform: 'rotate(90deg)',
+    marginRight: spacing.sm
   },
   container: {
     position: "fixed",
@@ -161,12 +163,12 @@ const styles = stylex.create({
   logo: {
     marginTop: spacing.lg
   },
-  invert: {
-    marginTop: spacing.lg,
-    marginRight: spacing.md,
-    fontSize: text.h3
-  },
   capital: {
+    fontSize: text.h3,
+    marginTop: spacing.lg
+  },
+  invest: {
+    fontSize: text.h3,
     color: colors.primary,
     fontWeight: 'bold'
   },
