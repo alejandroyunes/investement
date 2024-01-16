@@ -23,11 +23,26 @@ export default function WidgetFooter() {
             height={30}
           />
         </div>
-        <div {...stylex.props(s.middle)}>
-          <p {...stylex.props(s.title)}>Office</p>
-          <p>Germany, consectetur adipisicing elit  strasse</p>
+
+        <div {...stylex.props(s.middleL)}>
+          <Image
+            {...stylex.props(s.imageL)}
+            src={map}
+            alt="alt"
+            width={0}
+            height={0}
+          />
         </div>
         <div {...stylex.props(s.middleR)}>
+          <p {...stylex.props(s.title)}>Office</p>
+          <p>Germany, 4595 Berliner Str.</p>
+          <a href="tel:+1-555-555-5555">+1 800 555 5555</a>
+          <br />
+          <a href="mailto:tinfo@email.com">info@email.com</a>
+
+        </div>
+
+        <div {...stylex.props(s.right)}>
           <p {...stylex.props(s.title)}>Links</p>
           <ul {...stylex.props(s.list)}>
             <li {...stylex.props(s.item)}>
@@ -46,17 +61,6 @@ export default function WidgetFooter() {
             </li>
           </ul>
         </div>
-
-        <div {...stylex.props(s.right)}>
-
-          <Image
-            {...stylex.props(s.imageR)}
-            src={map}
-            alt="alt"
-            width={300}
-            height={0}
-          />
-        </div>
       </div>
 
       <div {...stylex.props(s.footer)}>
@@ -71,7 +75,7 @@ const s = stylex.create({
     display: 'grid',
     gap: spacing.md,
     gridTemplateColumns: {
-      default: '.5fr .7fr .7fr 1fr',
+      default: '.4fr 1fr .3fr .7fr',
       '@media (max-width: 900px)': 'repeat(1, 1fr)',
     },
     margin: `${spacing.xxxl} auto`,
@@ -113,14 +117,17 @@ const s = stylex.create({
     padding: `${spacing.lg} 0`
   },
   left: {},
-  middle: {
+  middleL: {},
+  imageL: {
+    width: '100%',
+    height: 'auto',
+    objectFit: 'cover'
+  },
+  middleR: {
     maxWidth: 300
   },
-  imageR: {
-    maxWidth: "100%",
-    height: 'auto',
+  right: {
+    textAlign: 'center'
   },
-  middleR: {},
-  right: {},
 
 })

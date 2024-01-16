@@ -98,16 +98,13 @@ const s = stylex.create({
     height: '100%',
     backgroundColor: {
       default: null,
-      ':hover': colors.primary
+      ':hover': colors.primary,
     },
-    animationName: {
-      default: null,
-      ':hover': fadeIn
+    opacity: {
+      default: 0,
+      ':hover': .3
     },
-    animationDuration: '.2s',
-    animationFillMode: 'forwards',
-    animationIterationCount: 1,
-    animationTimingFunction: 'ease-in-out',
+    zIndex: 101
   },
   text: {
     position: 'absolute',
@@ -116,7 +113,7 @@ const s = stylex.create({
     transform: 'translate(-50%, 0)',
     cursor: 'pointer',
     whiteSpace: 'nowrap',
-    color: colors.white
+    color: colors.white,
   },
   textContainer: {
     fontSize: text.h4,

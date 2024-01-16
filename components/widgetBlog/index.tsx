@@ -93,7 +93,7 @@ const s = stylex.create({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    marginTop: spacing.xl
+    marginTop: spacing.xl,
   },
   slogan: {
     fontSize: text.h5,
@@ -109,11 +109,11 @@ const s = stylex.create({
   },
   container: {
     display: 'grid',
+    gap: spacing.lg,
     gridTemplateColumns: {
       default: 'repeat(3, minmax(0, 1fr))',
       '@media (max-width: 900px)': 'repeat(1, 1fr)'
     },
-    gap: spacing.sm,
   },
   image: {
     maxWidth: "100%",
@@ -126,8 +126,8 @@ const s = stylex.create({
   },
   bg: {
     position: 'absolute',
-    top: -60,
-    right: 16,
+    top: -106,
+    left: -16,
     height: 90,
     width: 90,
     backgroundColor: colors.black,
@@ -151,7 +151,7 @@ const s = stylex.create({
     margin: `0 auto ${spacing.xxl}`,
     textAlign: 'center',
   },
-  left: {},
-  center: {},
-  right: {},
+  left: { cursor: 'pointer' },
+  center: { cursor: 'pointer' },
+  right: { cursor: 'pointer' },
 })

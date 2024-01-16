@@ -25,9 +25,9 @@ export default function Home() {
         <MobileNav />
       </div>
       <Billboard />
+      <WidgetAbout />
       <WidgetCeo />
       <WidgetService />
-      <WidgetAbout />
       <WidgetPartner />
       <WidgetBlog />
       <WidgetGetInTouch />
