@@ -31,15 +31,7 @@ export default function Social() {
 
       <div {...stylex.props(s.container, open && s.slideIn, open === false && s.slideOut)}>
         <div   {...stylex.props(s.header)}>
-          {/* <Image
-            {...stylex.props(s.logo)}
-            src={logo}
-            alt="alt"
-            width={130}
-            height={30}
-          /> */}
           <p {...stylex.props(s.capital)}>Capita<span {...stylex.props(s.invest)}>||nvest</span></p>
-
 
           <div {...stylex.props(s.animationExit)} onClick={handleClose}>
             <ExitSvg />

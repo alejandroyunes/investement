@@ -33,7 +33,6 @@ const pointingDown = stylex.keyframes({
   '100%': { transform: 'translateY(0px)' },
 })
 
-
 const s = stylex.create({
   container: {
     display: 'grid',
