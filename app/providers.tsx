@@ -17,6 +17,7 @@ import React, {
   SetStateAction,
   useEffect,
 } from 'react'
+import WidgetFooter from "@/components/widgets/widgetFooter"
 
 type Props = {
   children?: ReactNode
@@ -55,6 +56,7 @@ export const ThemeProvider = ({ children }: Props) => {
               <MobileNav />
             </div>
             {children}
+            <WidgetFooter />
           </div>
         </body>
       </html >

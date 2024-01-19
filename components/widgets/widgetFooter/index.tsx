@@ -4,6 +4,7 @@ import { colors, spacing, text } from "../../../app/globalTokens.stylex"
 import Image from "next/image"
 import logo from '../../components/Assets/images/logo.webp'
 import map from './assets/mapsGermanyjpb.jpg'
+import Link from "next/link"
 export default function WidgetFooter() {
   const handleClick = () => {
     console.log("click")
@@ -51,20 +52,31 @@ export default function WidgetFooter() {
         <div {...stylex.props(s.right)}>
           <p {...stylex.props(s.title)}>Links</p>
           <ul {...stylex.props(s.list)}>
-            <li {...stylex.props(s.item)}>
-              <span {...stylex.props(s.span)}>Home</span>
-            </li>
-            <li {...stylex.props(s.item)}>
-              <span {...stylex.props(s.span)}>Our Services</span>
-            </li>
-            <li {...stylex.props(s.item)}>
-              <span {...stylex.props(s.span)}>News</span></li>
-            <li {...stylex.props(s.item)}>
-              <span {...stylex.props(s.span)}>Blog</span>
-            </li>
-            <li {...stylex.props(s.item)}>
-              <span {...stylex.props(s.span)}>Contact</span>
-            </li>
+            <Link href="/" {...stylex.props(s.link)}>
+              <li {...stylex.props(s.item)}>
+                <span {...stylex.props(s.span)}>Home</span>
+              </li>
+            </Link>
+            <Link href="/about" {...stylex.props(s.link)}>
+              <li {...stylex.props(s.item)}>
+                <span {...stylex.props(s.span)}>About</span>
+              </li>
+            </Link>
+            <Link href="/news" {...stylex.props(s.link)}>
+              <li {...stylex.props(s.item)}>
+                <span {...stylex.props(s.span)}>News</span>
+              </li>
+            </Link>
+            <Link href="/blog" {...stylex.props(s.link)}>
+              <li {...stylex.props(s.item)}>
+                <span {...stylex.props(s.span)}>Blog</span>
+              </li>
+            </Link>
+            <Link href="/contact" {...stylex.props(s.link)}>
+              <li {...stylex.props(s.item)}>
+                <span {...stylex.props(s.span)}>Contact</span>
+              </li>
+            </Link>
           </ul>
         </div>
       </div>
@@ -97,6 +109,9 @@ const s = stylex.create({
   },
   item: {
     padding: `${spacing.xxs} 0`,
+  },
+  link: {
+    textDecoration: 'none'
   },
   span: {
     zIndex: 200,

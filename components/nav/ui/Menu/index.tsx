@@ -19,17 +19,17 @@ export default function Menu() {
             <span {...stylex.props(s.span)}>About</span>
           </li>
         </Link>
-        <Link href="/" {...stylex.props(s.link)}>
+        <Link href="/news" {...stylex.props(s.link)}>
           <li {...stylex.props(s.item)}>
             <span {...stylex.props(s.span)}>News</span>
           </li>
         </Link>
-        <Link href="/" {...stylex.props(s.link)}>
+        <Link href="/blog" {...stylex.props(s.link)}>
           <li {...stylex.props(s.item)}>
             <span {...stylex.props(s.span)}>Blog</span>
           </li>
         </Link>
-        <Link href="/" {...stylex.props(s.link)}>
+        <Link href="/contact" {...stylex.props(s.link)}>
           <li {...stylex.props(s.item)}>
             <span {...stylex.props(s.span)}>Contact</span>
           </li>

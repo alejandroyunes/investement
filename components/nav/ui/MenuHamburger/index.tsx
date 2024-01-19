@@ -59,7 +59,7 @@ export default function MenuHamburger() {
                 </p>
               </li>
             </Link>
-            <Link href="/" {...stylex.props(s.link)} onClick={handleClose}>
+            <Link href="/news" {...stylex.props(s.link)} onClick={handleClose}>
 
               <li {...stylex.props(s.items)}>
                 <p {...stylex.props(s.paragraph)}>
@@ -68,7 +68,7 @@ export default function MenuHamburger() {
               </li>
             </Link>
 
-            <Link href="/about" {...stylex.props(s.link)} onClick={handleClose}>
+            <Link href="/blog" {...stylex.props(s.link)} onClick={handleClose}>
 
               <li {...stylex.props(s.items)}>
                 <p {...stylex.props(s.paragraph)}>
@@ -77,7 +77,7 @@ export default function MenuHamburger() {
               </li>
             </Link>
 
-            <Link href="/about" {...stylex.props(s.link)} onClick={handleClose}>
+            <Link href="/contact" {...stylex.props(s.link)} onClick={handleClose}>
               <li {...stylex.props(s.items)}>
                 <p {...stylex.props(s.paragraph)}>
                   Contact

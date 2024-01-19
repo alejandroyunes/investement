@@ -14,7 +14,7 @@ export default function WidgetTitle({ title }: WidgetTitleProps) {
     <section>
       <div {...stylex.props(s.container)}>
         <div {...stylex.props(s.top)}>
-          <p>  {title}</p>
+          <p>{title}</p>
         </div>
 
         <div {...stylex.props(s.arrow)}>

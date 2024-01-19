@@ -18,7 +18,6 @@ export default function Home() {
       <WidgetPartner />
       <WidgetBlog />
       <WidgetGetInTouch />
-      <WidgetFooter />
     </>
   )
 }
