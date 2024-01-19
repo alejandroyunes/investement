@@ -11,6 +11,7 @@ import Facebook from "@/components/Assets/Icons/Facebook"
 import Twitter from "@/components/Assets/Icons/Twitter"
 import Instagram from "@/components/Assets/Icons/Instagram"
 import Youtube from "@/components/Assets/Icons/Youtube"
+import Link from "next/link"
 
 export default function MenuHamburger() {
   const [open, setOpen] = useState<boolean>()
@@ -32,15 +33,9 @@ export default function MenuHamburger() {
       <div {...stylex.props(s.container, open && s.slideIn, open === false && s.slideOut)}>
 
         <div   {...stylex.props(s.header)}>
-          {/* <Image
-            {...stylex.props(s.logo)}
-            src={logo}
-            alt="alt"
-            width={130}
-            height={30}
-          /> */}
-          <p {...stylex.props(s.capital)}>Capita<span {...stylex.props(s.invest)}>||nvest</span></p>
-
+          <Link href="/" {...stylex.props(s.link)} onClick={handleClose}>
+            <p {...stylex.props(s.capital)}>Capita<span {...stylex.props(s.invest)}>||nvest</span></p>
+          </Link>
           <div {...stylex.props(s.animationExit)} onClick={handleClose}>
             <ExitSvg />
           </div>
@@ -49,31 +44,47 @@ export default function MenuHamburger() {
         <div {...stylex.props(s.content)}>
 
           <ul {...stylex.props(s.body)}>
-            <li {...stylex.props(s.items)}>
-              <p {...stylex.props(s.paragraph)}>
-                Home
-              </p>
-            </li>
-            <li {...stylex.props(s.items)}>
-              <p {...stylex.props(s.paragraph)}>
-                Our Services
-              </p>
-            </li>
-            <li {...stylex.props(s.items)}>
-              <p {...stylex.props(s.paragraph)}>
-                News
-              </p>
-            </li>
-            <li {...stylex.props(s.items)}>
-              <p {...stylex.props(s.paragraph)}>
-                Blog
-              </p>
-            </li>
-            <li {...stylex.props(s.items)}>
-              <p {...stylex.props(s.paragraph)}>
-                Contact
-              </p>
-            </li>
+            <Link href="/" {...stylex.props(s.link)} onClick={handleClose}>
+              <li {...stylex.props(s.items)}>
+                <p {...stylex.props(s.paragraph)}>
+                  Home
+                </p>
+              </li>
+            </Link>
+
+            <Link href="/about" {...stylex.props(s.link)} onClick={handleClose}>
+              <li {...stylex.props(s.items)}>
+                <p {...stylex.props(s.paragraph)}>
+                  About
+                </p>
+              </li>
+            </Link>
+            <Link href="/" {...stylex.props(s.link)} onClick={handleClose}>
+
+              <li {...stylex.props(s.items)}>
+                <p {...stylex.props(s.paragraph)}>
+                  News
+                </p>
+              </li>
+            </Link>
+
+            <Link href="/about" {...stylex.props(s.link)} onClick={handleClose}>
+
+              <li {...stylex.props(s.items)}>
+                <p {...stylex.props(s.paragraph)}>
+                  Blog
+                </p>
+              </li>
+            </Link>
+
+            <Link href="/about" {...stylex.props(s.link)} onClick={handleClose}>
+              <li {...stylex.props(s.items)}>
+                <p {...stylex.props(s.paragraph)}>
+                  Contact
+                </p>
+              </li>
+            </Link>
+
           </ul>
 
           <div {...stylex.props(s.contact)}>
@@ -162,6 +173,10 @@ const s = stylex.create({
   },
   logo: {
     marginTop: spacing.lg
+  },
+  link: {
+    textDecoration: 'none',
+    color: 'inherit'
   },
   capital: {
     fontSize: text.h3,

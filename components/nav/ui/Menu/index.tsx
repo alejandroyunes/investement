@@ -1,32 +1,42 @@
 'use-client'
 
 import stylex from '@stylexjs/stylex'
-import { useState } from 'react'
 import { globalTokens as $, colors, spacing, text } from './../../../../app/globalTokens.stylex'
+import Link from 'next/link'
 
 export default function Menu() {
-  const [inputValue, setInputValue] = useState('');
-
 
   return (
     <div {...stylex.props(s.main)}>
       <ul {...stylex.props(s.list)}>
-        <li {...stylex.props(s.item)}>
-          <span {...stylex.props(s.span)}>Home</span>
-        </li>
-        <li {...stylex.props(s.item)}>
-          <span {...stylex.props(s.span)}>Our Services</span>
-        </li>
-        <li {...stylex.props(s.item)}>
-          <span {...stylex.props(s.span)}>News</span></li>
-        <li {...stylex.props(s.item)}>
-          <span {...stylex.props(s.span)}>Blog</span>
-        </li>
-        <li {...stylex.props(s.item)}>
-          <span {...stylex.props(s.span)}>Contact</span>
-        </li>
+        <Link href="/" {...stylex.props(s.link)}>
+          <li {...stylex.props(s.item)}>
+            <span {...stylex.props(s.span)}>Home</span>
+          </li>
+        </Link>
+        <Link href="/about" {...stylex.props(s.link)}>
+          <li {...stylex.props(s.item)}>
+            <span {...stylex.props(s.span)}>About</span>
+          </li>
+        </Link>
+        <Link href="/" {...stylex.props(s.link)}>
+          <li {...stylex.props(s.item)}>
+            <span {...stylex.props(s.span)}>News</span>
+          </li>
+        </Link>
+        <Link href="/" {...stylex.props(s.link)}>
+          <li {...stylex.props(s.item)}>
+            <span {...stylex.props(s.span)}>Blog</span>
+          </li>
+        </Link>
+        <Link href="/" {...stylex.props(s.link)}>
+          <li {...stylex.props(s.item)}>
+            <span {...stylex.props(s.span)}>Contact</span>
+          </li>
+        </Link>
+
       </ul>
-    </div>
+    </div >
   )
 }
 
@@ -39,6 +49,9 @@ const s = stylex.create({
     display: 'flex',
     flexDirection: 'row',
     listStyleType: 'none'
+  },
+  link: {
+    textDecoration: 'none'
   },
   item: {
     position: 'relative',

@@ -1,8 +1,12 @@
 "use client"
 import * as stylex from "@stylexjs/stylex"
-
+import { spacing } from "./globalTokens.stylex"
 import { globalTokens as $, colors } from "./globalTokens.stylex"
+
 import { darkTheme, lightTheme } from './themes'
+import { DesktopNav } from "../components/nav/DesktopNav"
+import { MobileNav } from "../components/nav/Mobile"
+
 
 import React, {
   ReactNode,
@@ -42,7 +46,16 @@ export const ThemeProvider = ({ children }: Props) => {
     <ThemeContext.Provider value={contextValue}>
       <html {...stylex.props(s.html, s.reset)} lang="es">
         <body {...stylex.props(s.reset, s.body, theme === 'dark' ? darkTheme : lightTheme)}>
-          {children}
+
+          <div {...stylex.props(s.container)}>
+            <div {...stylex.props(s.desktopNav)}>
+              <DesktopNav />
+            </div>
+            <div {...stylex.props(s.mobileNav)}>
+              <MobileNav />
+            </div>
+            {children}
+          </div>
         </body>
       </html >
     </ThemeContext.Provider >
@@ -57,6 +70,11 @@ export const useTheme = () => {
   return context
 }
 
+const fadeIn = stylex.keyframes({
+  '0%': { visibility: 'hidden', opacity: 0 },
+  '100%': { visibility: 'visible', opacity: 1 },
+})
+
 const s = stylex.create({
   html: {
     colorScheme: "light dark"
@@ -70,5 +88,27 @@ const s = stylex.create({
     color: colors.inverted,
     backgroundColor: colors.bg,
     fontFamily: $.fontSans,
+    animationName: fadeIn,
+    animationDuration: '2.8s',
+    animationFillMode: 'forwards',
+    animationIterationCount: 1,
+    animationTimingFunction: 'ease-in-out',
   },
+  container: {
+    maxWidth: $.maxWidth,
+    padding: `0 ${spacing.md}`,
+    margin: `0 auto`
+  },
+  desktopNav: {
+    display: {
+      default: "block",
+      "@media (max-width: 900px)": "none"
+    },
+  },
+  mobileNav: {
+    display: {
+      default: "none",
+      "@media (max-width: 900px)": "block"
+    },
+  }
 })

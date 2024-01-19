@@ -4,10 +4,11 @@ import Image from "next/image"
 import logo from '../../Assets/images/logo.webp'
 
 
-import { colors, globalTokens, spacing, text } from "../../../app/globalTokens.stylex"
+import { colors, spacing, text } from "../../../app/globalTokens.stylex"
 import ModePicker from "../ui/ModePicker"
 import Menu from "../ui/Menu"
 import Social from "../ui/SocialMenu"
+import Link from "next/link"
 
 export function DesktopNav() {
 
@@ -15,15 +16,9 @@ export function DesktopNav() {
     <nav {...stylex.props(s.container)}>
 
       <div  {...stylex.props(s.left)}>
-        {/* <Image
-          {...stylex.props(styles.logo)}
-          src={logo}
-          alt="alt"
-          width={130}
-          height={30}
-        /> */}
-        <p {...stylex.props(s.capital)}>Capita<span {...stylex.props(s.invest)}>||nvest</span></p>
-
+        <Link href="/" {...stylex.props(s.link)}>
+          <p {...stylex.props(s.capital)}>Capita<span {...stylex.props(s.invest)}>||nvest</span></p>
+        </Link>
         <Menu />
       </div>
 
@@ -42,6 +37,10 @@ const s = stylex.create({
     alignItems: "center",
     justifyContent: "space-between",
   },
+  link: {
+    textDecoration: 'none',
+    color: 'inherit'
+  },
   capital: {
     fontSize: text.h3,
   },
@@ -49,7 +48,7 @@ const s = stylex.create({
     marginRight: spacing.md,
     fontSize: text.h3,
     color: colors.primary,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   left: {
     display: "flex",

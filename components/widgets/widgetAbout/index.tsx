@@ -6,7 +6,12 @@ import abouttwo from './assets/about4.webp'
 import Image from "next/image"
 import ButtonTheme from "../../button/ButtonTheme"
 
-export default function WidgetAbout() {
+interface WidgetProps {
+  inversedImage?: boolean,
+}
+
+export default function WidgetAbout({ inversedImage }: WidgetProps) {
+
   const handleClick = () => {
     console.log("click")
   }
@@ -32,7 +37,7 @@ export default function WidgetAbout() {
         />
       </div>
 
-      <div {...stylex.props(s.right)}>
+      <div {...stylex.props(s.right, inversedImage && s.inverted)}>
         <p {...stylex.props(s.slogan)}>SAVING MONEY</p>
         <p {...stylex.props(s.title)}>Cut your costs by up to 50%</p>
         <p {...stylex.props(s.description)}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam beatae asperiores quod perferendis architecto animi.</p>
@@ -43,12 +48,9 @@ export default function WidgetAbout() {
           <ButtonTheme variant="primary" onClick={handleClick}>Explore</ButtonTheme>
         </div>
       </div>
-
-
     </section>
   )
 }
-
 
 const s = stylex.create({
   container: {
@@ -77,7 +79,6 @@ const s = stylex.create({
     },
     objectFit: 'cover',
     float: 'left',
-
   },
   imageR: {
     paddingTop: spacing.xxxl,
@@ -102,6 +103,9 @@ const s = stylex.create({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
+  },
+  inverted: {
+    order: -1
   },
   slogan: {
     fontSize: text.p,
