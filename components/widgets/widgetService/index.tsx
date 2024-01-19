@@ -82,7 +82,7 @@ const s = stylex.create({
     },
     gap: spacing.md,
     margin: {
-      default: `${spacing.xxxl} auto 0`,
+      default: `${spacing.xxl} auto 0`,
       '@media (max-width: 900px)': `${spacing.xl} auto 0`
     },
   },
