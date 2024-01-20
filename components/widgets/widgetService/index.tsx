@@ -100,7 +100,7 @@ const s = stylex.create({
       default: 0,
       ':hover': .3
     },
-    zIndex: 101
+    zIndex: 100
   },
   text: {
     position: 'absolute',
