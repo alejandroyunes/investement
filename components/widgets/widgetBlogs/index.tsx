@@ -14,7 +14,6 @@ export default function WidgetBlogs() {
 
   return (
     <section>
-
       <div {...stylex.props(s.container)}>
         <div {...stylex.props(s.left)}>
           <Image

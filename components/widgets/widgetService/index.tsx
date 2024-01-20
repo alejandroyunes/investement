@@ -68,10 +68,6 @@ export default function WidgetService() {
   )
 }
 
-const fadeIn = stylex.keyframes({
-  '0%': { visibility: 'hidden', opacity: 0 },
-  '100%': { visibility: 'visible', opacity: .3 },
-})
 
 const s = stylex.create({
   container: {
