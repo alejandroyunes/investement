@@ -3,7 +3,6 @@ import * as stylex from "@stylexjs/stylex"
 import { globalTokens as $, colors, spacing, text } from "../../app/globalTokens.stylex"
 import Link from "next/link"
 import Image from "next/image"
-import invest from './assets/invest.jpg'
 import billboardImg from './assets/billboard-4.jpg'
 import ButtonTheme from "../button/ButtonTheme"
 import Arrow from "../Assets/Icons/Arrow"
@@ -44,7 +43,6 @@ export default function Billboard() {
       </div>
 
       <div {...stylex.props(s.right)}>
-        {/* <a href="https://www.freepik.com/free-photo/cheerful-businessman-enjoying-success_3296004.htm#query=business%20man&position=7&from_view=search&track=ais&uuid=098a6b4f-e1a5-43d3-9fa7-fce477f1cf65">Image by katemangostar</a> */}
         <Image
           {...stylex.props(s.image)}
           src={billboardImg}
@@ -93,10 +91,6 @@ const s = stylex.create({
       default: `0 ${spacing.md}`,
       '@media (max-width: 500px)': `0 ${spacing.xs} 0 0`
     },
-    // paddingLeft: {
-    //   default: spacing.sm,
-    //   '@media (max-width: 500px)': 0
-    // },
     height: {
       default: 'calc(90vh)',
       '@media (max-width: 500px)': 'calc(80vh)',
@@ -138,10 +132,6 @@ const s = stylex.create({
     height: {
       default: 'calc(90vh)',
       '@media (max-width: 500px)': 'calc(80vh)',
-    },
-    transform: {
-      default: null,
-      // '@media (max-width: 500px)': 'scaleX(-1)'
     }
   },
   slogan: {
