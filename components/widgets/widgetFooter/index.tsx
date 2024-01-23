@@ -17,15 +17,7 @@ export default function WidgetFooter() {
 
       <div {...stylex.props(s.container)}>
         <div {...stylex.props(s.left)}>
-          {/* <Image
-            src={logo}
-            alt="alt"
-            width={120}
-            height={30}
-          /> */}
-          <p {...stylex.props(s.capital)}>Capita<span {...stylex.props(s.invest)}>||nvest</span></p>
-
-
+          <p {...stylex.props(s.capital)}>Estrella <span {...stylex.props(s.invest)}>Immobilien GmbH</span></p>
         </div>
 
         <div {...stylex.props(s.middleL)}>
@@ -39,13 +31,13 @@ export default function WidgetFooter() {
         </div>
         <div {...stylex.props(s.middleR)}>
           <p {...stylex.props(s.title)}>Office</p>
-          <p {...stylex.props(s.text)}>Germany, 4595 Berliner Str.</p>
+          <p {...stylex.props(s.text)}>Grützenstrasse 18807 FreienbachSchweiz</p>
           <p {...stylex.props(s.text)}>
-            <a {...stylex.props(s.text)} href="tel:+1-555-555-5555">+1 800 555 5555</a>
+            <a {...stylex.props(s.text)} href="tel:+41787746337">+41 78 774 63 37</a>
           </p>
 
           <p {...stylex.props(s.text)}>
-            <a {...stylex.props(s.text)} href="mailto:tinfo@email.com">info@email.com</a>
+            <a {...stylex.props(s.text)} href="mailto:matthias.schulz@estrella-immobilien.ch">matthias.schulz@estrella-immobilien.ch</a>
           </p>
         </div>
 

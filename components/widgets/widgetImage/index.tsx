@@ -56,7 +56,6 @@ const s = stylex.create({
     height: '100%',
     backgroundColor: colors.black,
     opacity: .3,
-    zIndex: 101
   },
   text: {
     position: 'absolute',
@@ -66,7 +65,6 @@ const s = stylex.create({
     whiteSpace: 'nowrap',
     color: colors.white,
     fontWeight: 'bold',
-    zIndex: 102
 
   },
   textContainer: {

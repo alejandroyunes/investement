@@ -5,8 +5,6 @@ import { globalTokens as $, colors, spacing, text } from "../../../../app/global
 import { useState } from "react"
 import ExitSvg from "../../../Assets/Icons/ExitSvg"
 import VerticalHamburger from "@/components/Assets/Icons/VerticalHamburger"
-import Image from "next/image"
-import logo from '../../../Assets/images/logo.webp'
 import Facebook from "@/components/Assets/Icons/Facebook"
 import Twitter from "@/components/Assets/Icons/Twitter"
 import Instagram from "@/components/Assets/Icons/Instagram"
@@ -31,7 +29,7 @@ export default function Social() {
 
       <div {...stylex.props(s.container, open && s.slideIn, open === false && s.slideOut)}>
         <div   {...stylex.props(s.header)}>
-          <p {...stylex.props(s.capital)}>Capita<span {...stylex.props(s.invest)}>||nvest</span></p>
+          <p {...stylex.props(s.capital)}>Estrella <span {...stylex.props(s.invest)}>Immobilien</span></p>
 
           <div {...stylex.props(s.animationExit)} onClick={handleClose}>
             <ExitSvg />
@@ -142,7 +140,7 @@ const s = stylex.create({
     animationName: slideOut,
     animationDuration: "0.5s",
     animationFillMode: "forwards",
-    zIndex: 101
+    zIndex: 200
   },
   header: {
     display: 'flex',

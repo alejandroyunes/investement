@@ -26,7 +26,7 @@ export default function WidgetGetInTouch() {
           </div>
           <div {...stylex.props(s.locationText)}>
             <p {...stylex.props(s.address)}>Address</p>
-            <p {...stylex.props(s.addressText)}>Germany, consectetur adipisicing elit  strasse</p>
+            <p {...stylex.props(s.addressText)}>Grützenstrasse 18807 FreienbachSchweiz</p>
           </div>
         </div>
 
@@ -36,8 +36,12 @@ export default function WidgetGetInTouch() {
           </div>
           <div {...stylex.props(s.locationText)}>
             <p {...stylex.props(s.address)}>Contact</p>
-            <p {...stylex.props(s.addressText)}>+1 800 555 44 88</p>
-            <p {...stylex.props(s.addressText)}>info@email.com</p>
+            <p {...stylex.props(s.addressText)}>
+              <a href="tel:+41787746337">+41 78 774 63 37</a>
+            </p>
+            <p {...stylex.props(s.addressText)}>
+              <a href="mailto:matthias.schulz@estrella-immobilien.ch">matthias.schulz@estrella-immobilien.ch</a>
+            </p>
           </div>
         </div>
 

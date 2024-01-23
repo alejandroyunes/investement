@@ -17,7 +17,7 @@ export function DesktopNav() {
 
       <div  {...stylex.props(s.left)}>
         <Link href="/" {...stylex.props(s.link)}>
-          <p {...stylex.props(s.capital)}>Capita<span {...stylex.props(s.invest)}>||nvest</span></p>
+          <p {...stylex.props(s.capital)}>Estrella <span {...stylex.props(s.invest)}>Immobilien GmbH</span></p>
         </Link>
         <Menu />
       </div>

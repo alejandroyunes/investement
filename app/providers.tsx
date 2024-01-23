@@ -35,7 +35,7 @@ export const ThemeProvider = ({ children }: Props) => {
 
   const isLocalStorageSupported = typeof window !== 'undefined' && window.localStorage
   const storeTheme = isLocalStorageSupported ? localStorage.getItem('theme') as Theme | null : null;
-  const [theme, setTheme] = useState<Theme>(storeTheme || 'dark')
+  const [theme, setTheme] = useState<Theme>(storeTheme || 'light')
 
   const contextValue: ThemeContextType = { theme, setTheme }
 

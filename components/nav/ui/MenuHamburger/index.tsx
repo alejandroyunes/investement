@@ -34,7 +34,7 @@ export default function MenuHamburger() {
 
         <div   {...stylex.props(s.header)}>
           <Link href="/" {...stylex.props(s.link)} onClick={handleClose}>
-            <p {...stylex.props(s.capital)}>Capita<span {...stylex.props(s.invest)}>||nvest</span></p>
+            <p {...stylex.props(s.capital)}>Estrella <span {...stylex.props(s.invest)}>Immobilien</span></p>
           </Link>
           <div {...stylex.props(s.animationExit)} onClick={handleClose}>
             <ExitSvg />

@@ -24,15 +24,19 @@ export default function WidgetContact() {
           <div {...stylex.props(s.svg)}>
             <LocationSvg />
           </div>
-          <p>Germany, 4595 Berliner Str.</p>
+          <p>Grützenstrasse 18807 FreienbachSchweiz</p>
         </div>
 
         <div>
           <div {...stylex.props(s.svg)}>
             <ContactSvg />
           </div>
-          <p>+1 800 555 5555</p>
-          <p>info@email.com</p>
+          <p>
+            <a href="tel:+41787746337">+41 78 774 63 37</a>
+          </p>
+          <p>
+            <a href="mailto:matthias.schulz@estrella-immobilien.ch">matthias.schulz@estrella-immobilien.ch</a>
+          </p>
         </div>
 
       </div>
