@@ -74,8 +74,8 @@ export default function Social() {
           </ul>
 
           <div {...stylex.props(s.contact)}>
-            <p {...stylex.props(s.contactTel)}>+1 800 555 44 88</p>
-            <p {...stylex.props(s.contactEmail)}>info@email.com</p>
+            <p {...stylex.props(s.contactTel)}><a href="tel:+41787746337">+41 78 774 63 37</a></p>
+            <p {...stylex.props(s.contactEmail)}><a href="mailto:matthias.schulz@estrella-immobilien.ch">matthias.schulz@estrella-immobilien.ch</a></p>
           </div>
 
         </div>
