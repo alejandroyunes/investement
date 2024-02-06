@@ -1,11 +1,9 @@
 import Billboard from "@/components/billboard"
 import WidgetCeo from "@/components/widgets/widgetCeo"
-import WidgetService from "@/components/widgets/widgetService"
 import WidgetAbout from '@/components/widgets/widgetAbout'
 import WidgetPartner from '@/components/widgets/widgetPartners'
-import WidgetBlog from '@/components/widgets/widgetBlog'
 import WidgetGetInTouch from '@/components/widgets/widgetGetInTouch'
-import WidgetFooter from '@/components/widgets/widgetFooter'
+import WidgetServices from "@/components/widgets/widgetServices"
 
 export default function Home() {
 
@@ -14,9 +12,8 @@ export default function Home() {
       <Billboard />
       <WidgetAbout />
       <WidgetCeo />
-      <WidgetService />
+      <WidgetServices />
       <WidgetPartner />
-      <WidgetBlog />
       <WidgetGetInTouch />
     </>
   )

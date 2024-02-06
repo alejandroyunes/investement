@@ -118,7 +118,7 @@ const s = stylex.create({
   },
   text: {
     position: 'absolute',
-    top: '70%',
+    top: '62%',
     left: '50%',
     transform: 'translate(-50%, 0)',
     cursor: 'pointer',
@@ -132,7 +132,7 @@ const s = stylex.create({
   },
   textContainer: {
     position: 'absolute',
-    top: '70%',
+    top: '62%',
     left: '50%',
     transform: 'translate(-30%, 0)',
     color: colors.white,

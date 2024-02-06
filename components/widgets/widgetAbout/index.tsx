@@ -4,7 +4,6 @@ import { colors, spacing, text } from "../../../app/globalTokens.stylex"
 import about from './assets/about7.webp'
 import abouttwo from './assets/about4.webp'
 import Image from "next/image"
-import ButtonTheme from "../../button/ButtonTheme"
 
 interface WidgetProps {
   inversedImage?: boolean,
@@ -12,9 +11,6 @@ interface WidgetProps {
 
 export default function WidgetAbout({ inversedImage }: WidgetProps) {
 
-  const handleClick = () => {
-    console.log("click")
-  }
 
   return (
     <section {...stylex.props(s.container)}>
@@ -42,9 +38,6 @@ export default function WidgetAbout({ inversedImage }: WidgetProps) {
         <p {...stylex.props(s.dateTop)}>MON-FRI: 9 AM – 22 PM</p>
         <p {...stylex.props(s.dateBottom)}>SATURDAY: 9 AM – 20 PM</p>
 
-        <div>
-          <ButtonTheme variant="primary" onClick={handleClick}>Explore</ButtonTheme>
-        </div>
       </div>
     </section>
   )

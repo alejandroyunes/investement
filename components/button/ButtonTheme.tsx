@@ -5,7 +5,7 @@ import "./ButtonTokens.stylex"
 import { buttonTokens } from "./ButtonTokens.stylex"
 
 type Props = Readonly<{
-  onClick: () => void
+  onClick?: () => void
   children: React.ReactNode
   // for Overrides
   theme?: Theme<typeof buttonTokens>
@@ -58,6 +58,6 @@ const variantStyles = stylex.create({
   },
   primary: {
     fontWeight: "bold",
-    color: colors.black
+    color: colors.white
   },
 })

@@ -22,14 +22,16 @@ export default function Billboard() {
             <h3>Seamless booking and guest management</h3>
           </div>
           <div {...stylex.props(s.headingTitle)}>
-            <h1>Luxury Stays</h1>
+            <h1>Luxury Stays &</h1>
           </div>
           <div {...stylex.props(s.headingSubTitle)}>
-            <h1>Short - Long Terms</h1>
+            <h1>Management</h1>
             <h1>Rentals</h1>
           </div>
           <div {...stylex.props(s.button)}>
-            <ButtonTheme variant="primary" onClick={handleClick}>Explore</ButtonTheme>
+            <Link href='/about'>
+              <ButtonTheme variant="primary">Explore</ButtonTheme>
+            </Link>
           </div>
         </div>
 

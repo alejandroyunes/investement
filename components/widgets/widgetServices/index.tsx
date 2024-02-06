@@ -1,89 +1,76 @@
 'use client'
 import * as stylex from "@stylexjs/stylex"
 import { colors, spacing, text } from "../../../app/globalTokens.stylex"
-import blog from './assets/blog.jpg'
+import realEstate from '../../Assets/images/service1.webp'
+import construction from '../../Assets/images/construction.webp'
+import management from '../../Assets/images/management.webp'
 
 
 import Image from "next/image"
 import ButtonTheme from "../../button/ButtonTheme"
+import Link from "next/link"
 
-export default function WidgetBlog() {
+export default function WidgetServices() {
+
   const handleClick = () => {
     console.log("click")
   }
 
+
   return (
     <section>
-
-      {/* <div {...stylex.props(s.titleContainer)}>
-        <p {...stylex.props(s.slogan)}>Tips for Clients</p>
-        <p {...stylex.props(s.title)}>Details about our work</p>
-      </div> */}
 
       <div {...stylex.props(s.container)}>
         <div {...stylex.props(s.left)}>
           <Image
             {...stylex.props(s.image)}
-            src={blog}
+            src={realEstate}
             alt="alt"
             width={0}
             height={0}
           />
           <div {...stylex.props(s.description)}>
-            <p {...stylex.props(s.blogSlogan)}>Business</p>
-            <h3>Lorem ipsum dolor, sit amet consectetur.</h3>
-            <div {...stylex.props(s.bg)}>
-              <p {...stylex.props(s.day)}>13</p>
-              <p>Apr</p>
-            </div>
+            <p {...stylex.props(s.blogSlogan)}>Real Estate</p>
+            <h3>Real estate with tailored solutions for your property.</h3>
           </div>
-
         </div>
-
 
         <div {...stylex.props(s.center)}>
           <Image
             {...stylex.props(s.image)}
-            src={blog}
+            src={management}
             alt="alt"
             width={0}
             height={0}
           />
           <div {...stylex.props(s.description)}>
-            <p {...stylex.props(s.blogSlogan)}>Business</p>
-            <h3>Lorem ipsum dolor, sit amet consectetur.</h3>
-            <div {...stylex.props(s.bg)}>
-              <p {...stylex.props(s.day)}>13</p>
-              <p>Apr</p>
-            </div>
+            <p {...stylex.props(s.blogSlogan)}>Management</p>
+            <h3>Effortless property management.</h3>
           </div>
-
         </div>
 
         <div {...stylex.props(s.right)}>
           <Image
             {...stylex.props(s.image)}
-            src={blog}
+            src={construction}
             alt="alt"
             width={0}
             height={0}
           />
           <div {...stylex.props(s.description)}>
-            <p {...stylex.props(s.blogSlogan)}>Business</p>
-            <h3>Lorem ipsum dolor, sit amet consectetur.</h3>
-            <div {...stylex.props(s.bg)}>
-              <p {...stylex.props(s.day)}>13</p>
-              <p>Apr</p>
-            </div>
+            <p {...stylex.props(s.blogSlogan)}>Construction</p>
+            <h3>Supporting construction projects with expertise.</h3>
           </div>
-
         </div>
 
       </div>
 
       <div {...stylex.props(s.button)}>
-        <ButtonTheme variant="primary" onClick={handleClick}>View More Posts</ButtonTheme>
+        <Link href='/services'>
+          <ButtonTheme variant="primary">Services</ButtonTheme>
+        </Link>
       </div>
+
     </section>
   )
 }
@@ -121,28 +108,11 @@ const s = stylex.create({
   },
   description: {
     padding: {
-      default: `${spacing.sm} ${spacing.xl} ${spacing.xl}`,
+      default: `${spacing.sm} ${spacing.sm} ${spacing.xl}`,
       '@media (max-width: 900px)': `${spacing.sm} ${spacing.sm} ${spacing.xl}`
     },
     fontSize: text.h4,
     position: 'relative'
-  },
-  bg: {
-    position: 'absolute',
-    top: -106,
-    left: -16,
-    height: 90,
-    width: 90,
-    backgroundColor: colors.black,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    lineHeight: 1,
-    color: colors.white
-  },
-  day: {
-    fontSize: text.h1
   },
   blogSlogan: {
     fontWeight: 'bold',
@@ -154,7 +124,7 @@ const s = stylex.create({
     margin: `0 auto ${spacing.xxl}`,
     textAlign: 'center',
   },
-  left: { cursor: 'pointer' },
-  center: { cursor: 'pointer' },
-  right: { cursor: 'pointer' },
+  left: {},
+  center: {},
+  right: {},
 })

@@ -41,7 +41,7 @@ export default function WidgetContact() {
 
       </div>
 
-      <WidgetImage title="Your results are our priority" />
+      <WidgetImage title="Contact us today" />
     </section>
   )
 }
