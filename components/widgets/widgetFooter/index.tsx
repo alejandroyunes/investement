@@ -59,11 +59,6 @@ export default function WidgetFooter() {
                 <span {...stylex.props(s.span)}>Services</span>
               </li>
             </Link>
-            <Link href="/blog" {...stylex.props(s.link)}>
-              <li {...stylex.props(s.item)}>
-                <span {...stylex.props(s.span)}>Blog</span>
-              </li>
-            </Link>
             <Link href="/contact" {...stylex.props(s.link)}>
               <li {...stylex.props(s.item)}>
                 <span {...stylex.props(s.span)}>Contact</span>

@@ -44,7 +44,10 @@ const s = stylex.create({
 
   subTitle: {
     marginBottom: spacing.sm,
-    textAlign: 'center'
+    textAlign: {
+      default: 'center',
+      '@media (max-width: 900px)': 'left'
+    }
   },
   title: {
     position: 'absolute',
