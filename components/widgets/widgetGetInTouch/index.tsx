@@ -15,7 +15,7 @@ export default function WidgetGetInTouch() {
       <div {...stylex.props(s.left)}>
         <p {...stylex.props(s.slogan)}>Contact Us</p>
         <p {...stylex.props(s.title)}>Get in touch</p>
-        <p>Feel free to reach out to us for any inquiries or assistance. We are here to help you find the perfect accommodation for your needs. Contact us via email or give us a call. Our dedicated team looks forward to assisting you with any questions or reservations. Your comfort is our priority, and we are eager to make your stay exceptional.</p>
+        <p>Feel free to reach out to us for any inquiries or assistance. We are here to help you find the perfect accommodation for your needs. Contact us via email or give us a call. Our dedicated team looks forward to assisting you with any questions or reservations.</p>
       </div>
 
       <div {...stylex.props(s.right)}>

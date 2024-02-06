@@ -92,8 +92,8 @@ const s = stylex.create({
     },
     marginTop: {
       default: -333,
-      '@media (max-width: 900px) and (min-width: 667px)': -20,
-      '@media (max-width: 667px) and (min-width: 500px)': -380,
+      '@media (max-width: 900px)': -20,
+      '@media (max-width: 667px)': -380,
       '@media (max-width: 500px)': -380,
     }
   },

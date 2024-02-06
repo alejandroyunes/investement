@@ -1,13 +1,9 @@
-import WidgetCeo from "@/components/widgets/widgetCeo"
-import WidgetTitle from '@/components/widgets/widgetTitle'
-import WidgetAbout from '@/components/widgets/widgetAbout'
+import AboutComponent from "@/components/about"
 
 export default function About() {
   return (
     <div >
-      <WidgetTitle title='About Us' />
-      <WidgetAbout inversedImage />
-      <WidgetCeo />
+      <AboutComponent />
     </div>
   )
 }
