@@ -10,7 +10,7 @@ export default function WidgetCeo() {
     <section {...stylex.props(s.container)}>
       <div {...stylex.props(s.left)}>
         <p>
-          Meticulously designed to offer everything for a comfortable long-term stay, from essential modern amenities to unexpected luxuries like a pool, private gym, or a breathtaking rooftop terrace.</p>
+          Meticulously designed to offer everything for a comfortable long or short term stay, from essential modern amenities to unexpected luxuries like a pool, private gym, or a breathtaking rooftop terrace.</p>
         <div {...stylex.props(s.leftBottom)}>
           <div>
             <Image
@@ -22,7 +22,7 @@ export default function WidgetCeo() {
             />
           </div>
           <div>
-            <p {...stylex.props(s.name)}>Roger Waters</p>
+            <p {...stylex.props(s.name)}>Matthias Nadler</p>
             <p>Ceo</p>
           </div>
         </div>

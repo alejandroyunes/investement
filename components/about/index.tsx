@@ -18,7 +18,7 @@ export default function AboutComponent() {
       <div {...stylex.props(s.aboutUs)}>
         <div>
           <h3 {...stylex.props(s.subTitle)}>Our Mission</h3>
-          <p>We are committed to showcasing properties on premier platforms, offering flexible rental options, and delivering unparalleled services that cater to the unique needs and goals of property owners, ensuring maximum returns on investments.</p>
+          <p>We are committed to showcasing properties on premier platforms, offering flexible rental options, and delivering unparalleled services that cater to the unique needs and goals of property owners, ensuring maximum returns on your rental property.</p>
         </div>
         <div>
           <h3 {...stylex.props(s.subTitle)}>Our Vision</h3>

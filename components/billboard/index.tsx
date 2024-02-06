@@ -19,7 +19,7 @@ export default function Billboard() {
       <div  {...stylex.props(s.left)}>
         <div {...stylex.props(s.topLeft)}>
           <div {...stylex.props(s.slogan)}>
-            <h3>Seamless booking and guest management</h3>
+            <h3>Seamless booking and property management</h3>
           </div>
           <div {...stylex.props(s.headingTitle)}>
             <h1>Luxury Stays &</h1>

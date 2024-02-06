@@ -90,7 +90,10 @@ const s = stylex.create({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    order: 1
+    order: {
+      default: 1,
+      '@media (max-width: 756px)': 0
+    }
   },
   image: {
     maxWidth: "100%",
