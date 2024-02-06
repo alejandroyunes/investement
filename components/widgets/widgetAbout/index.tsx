@@ -19,7 +19,6 @@ export default function WidgetAbout({ inversedImage }: WidgetProps) {
   return (
     <section {...stylex.props(s.container)}>
       <div {...stylex.props(s.left)}>
-        {/* <a href="https://www.freepik.com/free-photo/happy-male-entrepreneur-reading-email-laptop-while-working-office_26390438.htm#page=2&query=business%20and%20computer&position=1&from_view=search&track=ais&uuid=79941738-8308-42f4-a131-2cadc372de65">Image by Drazen Zigic</a> on Freepik */}
         <Image
           {...stylex.props(s.imageL)}
           src={about}
@@ -27,7 +26,6 @@ export default function WidgetAbout({ inversedImage }: WidgetProps) {
           width={0}
           height={0}
         />
-        {/* Image by <a href="https://www.freepik.com/free-photo/smiling-businesspeople-working-with-laptop_962034.htm#page=2&query=business%20and%20computer&position=5&from_view=search&track=ais&uuid=79941738-8308-42f4-a131-2cadc372de65">Freepik</a> */}
         <Image
           {...stylex.props(s.imageR)}
           src={abouttwo}
@@ -38,9 +36,9 @@ export default function WidgetAbout({ inversedImage }: WidgetProps) {
       </div>
 
       <div {...stylex.props(s.right, inversedImage && s.inverted)}>
-        <p {...stylex.props(s.slogan)}>SAVING MONEY</p>
-        <p {...stylex.props(s.title)}>Cut your costs by up to 50%</p>
-        <p {...stylex.props(s.description)}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam beatae asperiores quod perferendis architecto animi.</p>
+        <p {...stylex.props(s.slogan)}>FLEXIBLE HOURS</p>
+        <p {...stylex.props(s.title)}>Your vacation home, effortlessly cared for.</p>
+        <p {...stylex.props(s.description)}>We showcase your property to a global audience, attracting high-quality travelers for short-term stays or long-term leases.</p>
         <p {...stylex.props(s.dateTop)}>MON-FRI: 9 AM – 22 PM</p>
         <p {...stylex.props(s.dateBottom)}>SATURDAY: 9 AM – 20 PM</p>
 

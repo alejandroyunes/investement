@@ -9,7 +9,8 @@ export default function WidgetCeo() {
   return (
     <section {...stylex.props(s.container)}>
       <div {...stylex.props(s.left)}>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>
+          Meticulously designed to offer everything for a comfortable long-term stay, from essential modern amenities to unexpected luxuries like a pool, private gym, or a breathtaking rooftop terrace.</p>
         <div {...stylex.props(s.leftBottom)}>
           <div>
             <Image
@@ -29,14 +30,12 @@ export default function WidgetCeo() {
 
       <div>
         <span {...stylex.props(s.span)}>L</span>
-        <p>orem elit, sed do eiusm onsectetur adipiscing elit, eiusm od adipiscing elit conse  provident quod quas tenetur no. adipisicing elit. Quam dicta repellat.</p>
+        <p>uxurious short-term and monthly stays, personalized service, exclusive homes, ideal for extended visits, renovations, or work relocations. </p>
         <br />
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
       </div>
 
       <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quo.</p><br />
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas tempora ratione fugit doloremque voluptate optio minus.</p>
+        <p>Tailored, safe, and fully furnished luxury vacation rentals with exceptional amenities, reflecting the vision of our CEO for unparalleled hospitality.</p><br />
       </div>
 
     </section >

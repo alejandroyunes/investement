@@ -3,7 +3,7 @@ import * as stylex from "@stylexjs/stylex"
 import { globalTokens as $, colors, spacing, text } from "../../app/globalTokens.stylex"
 import Link from "next/link"
 import Image from "next/image"
-import billboardImg from './assets/billboard-4.jpg'
+import billboardImg from './assets/billboard-3.webp'
 import ButtonTheme from "../button/ButtonTheme"
 import Arrow from "../Assets/Icons/Arrow"
 
@@ -19,14 +19,14 @@ export default function Billboard() {
       <div  {...stylex.props(s.left)}>
         <div {...stylex.props(s.topLeft)}>
           <div {...stylex.props(s.slogan)}>
-            <h3>Optimize your investment growth</h3>
+            <h3>Seamless booking and guest management</h3>
           </div>
           <div {...stylex.props(s.headingTitle)}>
-            <h1>Professional</h1>
+            <h1>Luxury Stays</h1>
           </div>
           <div {...stylex.props(s.headingSubTitle)}>
-            <h1>Investment</h1>
-            <h1>Company</h1>
+            <h1>Short - Long Terms</h1>
+            <h1>Rentals</h1>
           </div>
           <div {...stylex.props(s.button)}>
             <ButtonTheme variant="primary" onClick={handleClick}>Explore</ButtonTheme>
