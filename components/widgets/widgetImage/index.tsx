@@ -59,7 +59,10 @@ const s = stylex.create({
   },
   text: {
     position: 'absolute',
-    top: '70%',
+    top: {
+      default: '50%',
+      '@media (max-width: 700px)': '40%'
+    },
     left: '50%',
     transform: 'translate(-50%, 0)',
     whiteSpace: 'nowrap',
@@ -70,7 +73,7 @@ const s = stylex.create({
   textContainer: {
     fontSize: {
       default: text.h1,
-      '@media (max-width: 700px)': text.p
+      '@media (max-width: 700px)': text.h4
     }
   },
   image: {

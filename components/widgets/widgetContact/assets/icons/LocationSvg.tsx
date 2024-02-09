@@ -5,7 +5,7 @@ export default function LocationSvg() {
 	return (
 
 		<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-			width="54px" height="54px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" >
+			width="54px" height="54px" viewBox="0 0 64 64" enableBackground="new 0 0 64 64" >
 			<g>
 				<path {...stylex.props(s.svgFill)} d="M62.364,0.773c-0.694-0.509-1.526-0.772-2.366-0.772c-0.403,0-0.809,0.061-1.202,0.185L41.033,5.795
 		l-16.769-5.59C23.854,0.068,23.427,0,22.999,0c-0.468,0-0.937,0.082-1.382,0.247l-19,7C1.045,7.826,0,9.324,0,11v49

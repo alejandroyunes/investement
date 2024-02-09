@@ -4,7 +4,7 @@ import stylex from "@stylexjs/stylex"
 export default function ClockSvg() {
   return (
     <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-      width="54px" height="54px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+      width="54px" height="54px" viewBox="0 0 64 64" enableBackground="new 0 0 64 64">
       <g>
         <path {...stylex.props(s.svgFill)} d="M32,0C14.327,0,0,14.327,0,32s14.327,32,32,32s32-14.327,32-32S49.673,0,32,0z M32,62
 C15.431,62,2,48.568,2,32C2,15.431,15.431,2,32,2s30,13.431,30,30C62,48.568,48.569,62,32,62z"/>

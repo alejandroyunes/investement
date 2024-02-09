@@ -5,7 +5,7 @@ export default function ContactSvg() {
   return (
 
     <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-      width="54px" height="54px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" >
+      width="54px" height="54px" viewBox="0 0 64 64" enableBackground="new 0 0 64 64" >
       <g>
         <path {...stylex.props(s.svgFill)} d="M59,29H47c-1.657,0-3,1.344-3,3s1.343,3,3,3h12c1.657,0,3-1.344,3-3S60.657,29,59,29z M59,33H47
  c-0.553,0-1-0.447-1-1s0.447-1,1-1h12c0.553,0,1,0.447,1,1S59.553,33,59,33z"/>
