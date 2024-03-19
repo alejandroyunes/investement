@@ -2,15 +2,10 @@
 const stylexPlugin = require("@stylexjs/nextjs-plugin")
 
 const nextConfig = {
+  output: 'export',
   pageExtensions: ["js", "jsx", "ts", "tsx"],
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'res.cloudinary.com',
-        pathname: '**',
-      },
-    ],
+    unoptimized: true,
   },
 }
 
